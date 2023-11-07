@@ -5,7 +5,7 @@ function Roster() {
   const [data, setData] = useState({ members: [] });
   // const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 15;
+  const itemsPerPage = 14;
 
   // const handleFetchAndSaveData = async () => {
   //   if (loading) {
