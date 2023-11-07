@@ -15,7 +15,7 @@ app.use(express.json());
 // Enable CORS to allow requests from your React application's origin
 app.use(cors());
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://jay-user1:Callofduty*2322@cluster0.kz0zdwo.mongodb.net/charData", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   writeConcern: {
@@ -24,15 +24,11 @@ mongoose.connect(process.env.MONGODB_URI, {
   },
 });
 
-app.use(express.static(path.join(__dirname, '../client/build')));
 
-app.get('*', (req, res) => {  
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
 
 app.post('/api/fetchAndSaveData', async (req, res) => {
   try {
-    const response = await axios.get(process.env.BLIZZARD_API_URL);
+    const response = await axios.get("https://us.api.blizzard.com/data/wow/guild/emerald-dream/sweatshop/roster?namespace=profile-us&locale=en_US&access_token=USHjKsHoVzIMIYszSM8F5z7V2jPTp8N33H");
     console.log('Response:', response.data);
 
     // Extract the faction name and ensure it's a string
@@ -95,7 +91,12 @@ app.get('/api/data', async (req, res) => {
   }
 });
 
-
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
+app.get('*', (req, res) => {  
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
 
 app.listen(port, () => {

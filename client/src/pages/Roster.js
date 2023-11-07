@@ -3,25 +3,25 @@ import axios from 'axios';
 
 function Roster() {
   const [data, setData] = useState({ members: [] });
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 14;
 
-  // const handleFetchAndSaveData = async () => {
-  //   if (loading) {
-  //     return; // Return early if a request is already in progress
-  //   }
+  const handleFetchAndSaveData = async () => {
+    if (loading) {
+      return; // Return early if a request is already in progress
+    }
 
-  //   setLoading(true);
-  //   try {
-  //     await axios.post('http://localhost:3001/api/fetchAndSaveData');
-  //     fetchData();
-  //   } catch (error) {
-  //     console.error('Error fetching and saving data:', error);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
+    setLoading(true);
+    try {
+      await axios.post('http://localhost:3001/api/fetchAndSaveData');
+      fetchData();
+    } catch (error) {
+      console.error('Error fetching and saving data:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
     fetchData();
@@ -30,6 +30,7 @@ function Roster() {
   const fetchData = async () => {
     try {
       const response = await axios.get('http://localhost:3001/api/data');
+      console.log('Response:', response.data);
       if (response.data.length > 0) {
         setData(response.data[0]);
       }
@@ -58,9 +59,9 @@ function Roster() {
   return (
     <div className="data">
       <h1>Sweatshop Roster</h1>
-      {/* <button onClick={handleFetchAndSaveData} disabled={loading}>
+      <button onClick={handleFetchAndSaveData} disabled={loading}>
         {loading ? 'Fetching...' : 'Fetch and Save Data'}
-      </button> */}
+      </button>
       <table>
         <thead>
           <tr>
