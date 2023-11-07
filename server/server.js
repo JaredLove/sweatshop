@@ -10,6 +10,7 @@ const port = process.env.PORT || 3001;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+
 // Enable CORS to allow requests from your React application's origin
 app.use(cors());
 // Connect to MongoDB
