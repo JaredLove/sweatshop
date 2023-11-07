@@ -6,6 +6,7 @@ const axios = require('axios');
 const cors = require('cors'); // Import the 'cors' middleware
 const Guild = require('./models/Guild');
 const app = express();
+const path = require('path');
 const port = process.env.PORT || 3001;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
