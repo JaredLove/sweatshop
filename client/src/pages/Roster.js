@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+const API_URL = 'https://main--neon-sunshine-4a5699.netlify.app';
 function Roster() {
   const [data, setData] = useState({ members: [] });
   const [loading, setLoading] = useState(false);
@@ -14,7 +14,7 @@ function Roster() {
 
     setLoading(true);
     try {
-      await axios.post('http://localhost:3001/api/fetchAndSaveData');
+      await axios.post(`${API_URL}/api/fetchAndSaveData`);
       fetchData();
     } catch (error) {
       console.error('Error fetching and saving data:', error);
@@ -29,7 +29,7 @@ function Roster() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/api/data');
+      const response = await axios.get(`${API_URL}/api/fetchAndSaveData`);
       console.log('Response:', response.data);
       if (response.data.length > 0) {
         setData(response.data[0]);
