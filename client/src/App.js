@@ -20,10 +20,10 @@ function App() {
       <main>
       <Router>
           <Routes>
-            <Route path="/" exact component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/roster" component={Roster} />
-            <Route path="/contact" component={Contact} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about"  element={<About />}  />
+            <Route path="/roster"  element={<Roster />}  />
+            <Route path="/contact" element={<Contact />}  />
             {/* Add a catch-all route for 404 Not Found */}
             <Route component={Home} />
           </Routes>
