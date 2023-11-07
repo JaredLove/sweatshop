@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Header from './components/Header';
@@ -17,18 +18,16 @@ function App() {
           handlePageChange={handlePageChange}
       ></Header>
       <main>
-        {currentPage === 'home' ? (
-
-            <Home></Home>
-        ) : currentPage === 'about' ? (
-          <About></About>
-        ) :  currentPage === 'roster' ? (
-          <Roster></Roster>
-          ) :  currentPage === 'contact' ? (
-            <Contact></Contact>
-            ) : (
-              <Home></Home>
-        )}
+      <Router>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/roster" component={Roster} />
+            <Route path="/contact" component={Contact} />
+            {/* Add a catch-all route for 404 Not Found */}
+            <Route component={Home} />
+          </Switch>
+        </Router>
       </main>
     </div>
   );
