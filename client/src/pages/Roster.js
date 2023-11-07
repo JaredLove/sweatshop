@@ -29,7 +29,7 @@ function Roster() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/fetchAndSaveData`);
+      const response = await axios.get(`${API_URL}/api/data`);
       console.log('Response:', response.data);
       if (response.data.length > 0) {
         setData(response.data[0]);
