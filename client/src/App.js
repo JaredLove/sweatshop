@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Header from './components/Header';
@@ -19,14 +19,14 @@ function App() {
       ></Header>
       <main>
       <Router>
-          <Switch>
+          <Routes>
             <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />
             <Route path="/roster" component={Roster} />
             <Route path="/contact" component={Contact} />
             {/* Add a catch-all route for 404 Not Found */}
             <Route component={Home} />
-          </Switch>
+          </Routes>
         </Router>
       </main>
     </div>

@@ -26,15 +26,17 @@ nav li {
     margin-left: 15px;
     padding-top: 20px;
     position: relative;
+  
 
 }
 
 nav li a {
-    color: #444;
+    color: #fff;
     text-decoration: none;
+    margin: 10px;
 }
 
 nav li a:hover {
-    color: #000;
+    color: #fff;
 }
 
