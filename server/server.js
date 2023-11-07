@@ -7,7 +7,9 @@ const cors = require('cors'); // Import the 'cors' middleware
 const Guild = require('./models/Guild');
 const app = express();
 const port = process.env.PORT || 3001;
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
 // Enable CORS to allow requests from your React application's origin
 app.use(cors());
 // Connect to MongoDB
