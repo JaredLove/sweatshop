@@ -28,7 +28,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 app.post('/api/fetchAndSaveData', async (req, res) => {
   try {
-    const response = await axios.get("https://us.api.blizzard.com/data/wow/guild/emerald-dream/sweatshop/roster?namespace=profile-us&locale=en_US&access_token=USHjKsHoVzIMIYszSM8F5z7V2jPTp8N33H");
+    const response = await axios.get(process.env.BLIZZARD_API_URL);
     console.log('Response:', response.data);
 
     // Extract the faction name and ensure it's a string
