@@ -11,7 +11,7 @@ app.use(express.json());
 // Enable CORS to allow requests from your React application's origin
 app.use(cors());
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://jay-user1:Callofduty*2322@cluster0.kz0zdwo.mongodb.net/charData', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   writeConcern: {
