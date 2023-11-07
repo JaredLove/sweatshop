@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),  url("./assets/images/SWEATSHOP_FINAL_LOGO.png"); 
+  position: relative;
+  height: 150vh;
+  max-height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+  height: 100px;
+  color: black;
+}
+
+.data {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 90%;
+  height: 1000px;
+  color: black;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+
+.about-section-p{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: 90%;
+  height: 800px;
+    color: black;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+
+.about-section-p p {
+  width: 50ch;
+}
+
+
+
