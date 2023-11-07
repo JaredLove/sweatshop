@@ -13,7 +13,11 @@ app.use(express.json());
 
 
 // Enable CORS to allow requests from your React application's origin
-app.use(cors());
+const corsOptions = {
+  origin: 'https://main--neon-sunshine-4a5699.netlify.app',
+};
+
+app.use(cors(corsOptions));
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
