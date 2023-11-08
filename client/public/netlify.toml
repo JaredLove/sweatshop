@@ -1,0 +1,6 @@
+[[headers]]
+  for = "/api/data/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "https://main--neon-sunshine-4a5699.netlify.app"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
