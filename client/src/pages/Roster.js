@@ -32,6 +32,7 @@ function Roster() {
   const fetchData = async () => {    
     console.log('Imherein2')
     try {
+      
       const response = await axios.get(`${API_URL}/api/data`);
       console.log('Response:', response.data);
   
