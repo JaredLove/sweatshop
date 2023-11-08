@@ -11,7 +11,12 @@ const port = process.env.PORT || 3001;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use(cors());
+
+ const corsOptions = {
+    origin: 'https://654becb84a4d830008cb57c0--neon-sunshine-4a5699.netlify.app/',
+    optionsSuccessStatus: 200,
+  };
+app.use(cors(corsOptions));
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://jay-user1:Callofduty*2322@cluster0.kz0zdwo.mongodb.net/charData', {
   useNewUrlParser: true,
