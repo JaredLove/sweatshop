@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-const API_URL = 'https://654becb84a4d830008cb57c0--neon-sunshine-4a5699.netlify.app/';
+const API_URL = 'https://654becb84a4d830008cb57c0--neon-sunshine-4a5699.netlify.app';
 function Roster() {
   const [data, setData] = useState({ members: [] });
   // const [loading, setLoading] = useState(false);
@@ -32,7 +32,7 @@ function Roster() {
   const fetchData = async () => {    
     console.log('Imherein2')
     try {
-      
+
       const response = await axios.get(`${API_URL}/api/data`);
       console.log('Response:', response.data);
   
