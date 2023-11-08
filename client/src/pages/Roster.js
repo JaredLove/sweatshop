@@ -1,38 +1,43 @@
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 const API_URL = 'https://main--neon-sunshine-4a5699.netlify.app';
 function Roster() {
   const [data, setData] = useState({ members: [] });
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 14;
 
-  const handleFetchAndSaveData = async () => {
-    if (loading) {
-      return; // Return early if a request is already in progress
-    }
+  // const handleFetchAndSaveData = async () => {
+  //   if (loading) {
+  //     return; // Return early if a request is already in progress
+  //   }
 
-    setLoading(true);
-    try {
-      await axios.post(`${API_URL}/api/fetchAndSaveData`);
-      fetchData();
-    } catch (error) {
-      console.error('Error fetching and saving data:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
+  //   setLoading(true);
+  //   try {
+  //     await axios.post(`http://localhost:3001/api/fetchAndSaveData`);
+  //     fetchData();
+  //   } catch (error) {
+  //     console.error('Error fetching and saving data:', error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
   useEffect(() => {
     fetchData();
+    console.log('Imhere')
   }, []);
 
-  const fetchData = async () => {
+
+  const fetchData = async () => {    
+    console.log('Imherein2')
     try {
       const response = await axios.get(`${API_URL}/api/data`);
       console.log('Response:', response.data);
+  
       if (response.data.length > 0) {
         setData(response.data[0]);
+        console.log('Imherein2')
       }
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -55,13 +60,13 @@ function Roster() {
 
   // Create an array of page numbers (1, 2, 3, ...)
   const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
-
+  console.log(data);
   return (
     <div className="data">
       <h1>Sweatshop Roster</h1>
-      <button onClick={handleFetchAndSaveData} disabled={loading}>
+      {/* <button onClick={handleFetchAndSaveData} disabled={loading}>
         {loading ? 'Fetching...' : 'Fetch and Save Data'}
-      </button>
+      </button> */}
       <table>
         <thead>
           <tr>

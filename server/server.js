@@ -11,15 +11,9 @@ const port = process.env.PORT || 3001;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-
-// Enable CORS to allow requests from your React application's origin
-const corsOptions = {
-  origin: 'https://main--neon-sunshine-4a5699.netlify.app',
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect('mongodb+srv://jay-user1:Callofduty*2322@cluster0.kz0zdwo.mongodb.net/charData', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   writeConcern: {
@@ -93,6 +87,10 @@ app.get('/api/data', async (req, res) => {
     console.error('Error fetching data:', error);
     res.status(500).json({ error: 'An error occurred while fetching data' });
   }
+});
+
+app.get('/api/hi', async (req, res) => {
+    res.send('Hello World');
 });
 
 if (process.env.NODE_ENV === 'production') {
