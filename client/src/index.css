@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue');
 * {
   box-sizing: border-box;
   
@@ -11,6 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(44, 44, 44)
 }
 
 code {
@@ -18,18 +20,6 @@ code {
     monospace;
 }
 
-.hero {
-    background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),  url("./assets/images/SWEATSHOP_FINAL_LOGO.png"); 
-  position: relative;
-  height: 150vh;
-  max-height: 100%;
-  width: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-top: 4rem;
-  padding-bottom: 6rem;
-}
 
 .pagination {
   display: flex;
@@ -67,26 +57,19 @@ th, td {
   text-align: left;
 }
 
-
-.about-section-p{
+.home-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
-  width: 90%;
-  height: 800px;
-    color: black;
-    font-size: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffffff;
-    border-radius: 10px;
+  height: 100vh;
 }
+.home-container h1 {
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
 
-
-.about-section-p p {
-  width: 50ch;
 }
 
 

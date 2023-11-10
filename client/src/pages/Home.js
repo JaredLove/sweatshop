@@ -1,14 +1,10 @@
 import React from "react";
 
-
-
-
-
 const Home = () => {
+    
     return (
-        <div>
-        <h1>Home</h1>
-        <p>Home page body content</p>
+        <div className="home-container">
+        <h1>Keepin' It Sweaty Since 2020.</h1>
         </div>
     );
 };
