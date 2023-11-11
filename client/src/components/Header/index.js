@@ -8,9 +8,6 @@ const Header = ({ currentPage, handlePageChange}) => {
             <div className="logo-container">
                 <img src={logo} alt="logo" className="logo" />
             </div>
-            <div className="quote">
-            <p>Keepin' It Sweaty Since 2020</p>
-            </div>
             <div>
             <ul>
                 <li><button  onClick={() => {handlePageChange('home');}}>Home</button></li>

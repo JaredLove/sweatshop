@@ -12,12 +12,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 
-app.use(cors(
-  {
-    origin: 'https://neon-sunshine-4a5699.netlify.app',
-    optionsSuccessStatus: 200
-  }
-));
+app.use(cors());
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://jay-user1:Callofduty*2322@cluster0.kz0zdwo.mongodb.net/charData', {
   useNewUrlParser: true,
