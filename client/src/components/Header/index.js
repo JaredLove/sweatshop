@@ -3,7 +3,8 @@ import "./style.css";
 import logo from '../../assets/images/highres.png'
 const Header = ({ currentPage, handlePageChange}) => {
     return (
-
+        <div>
+        <header>
         <nav>
             <div className="logo-container">
                 <img src={logo} alt="logo" className="logo" />
@@ -16,8 +17,10 @@ const Header = ({ currentPage, handlePageChange}) => {
                 <li><button  onClick={() => {handlePageChange('contact');}}>Join Us</button></li>
             </ul>
             </div>
-        </nav>
-
+        </nav> 
+        </header>
+       
+        </div>
     );
 }   
 

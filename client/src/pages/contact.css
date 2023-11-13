@@ -1,0 +1,16 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    color: #fff;
+    background-color: #0f1224;
+}
+
+
+.contact .icon {
+    font-size: 5rem;
+    margin: 0.5rem;
+}
+

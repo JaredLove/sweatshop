@@ -21,6 +21,7 @@ function Splash() {
   ];
 
   return (
+    <div>
     <div id="splash" className="jumbo-anchor-element back-full-container">
       {slideArr.map((slide, i) => (
         <div className="movieSlide" key={i}>
@@ -38,12 +39,15 @@ function Splash() {
           </div>
         </div>
       ))}
-      <div className="jumbo-positioner">
+    {/* <div className="jumbo-positioner">
         <div className="jumbo-center">
           <div className="jumbo-content">
+            <h1 className="fs-2">Keeping It Sweaty Since 2020</h1>
+            <button class="bn632-hover bn26">Button</button>
           </div>
         </div>
-      </div>
+      </div> */}
+    </div>
     </div>
   );
 }

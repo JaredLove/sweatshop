@@ -1,10 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
+import './roster.css';
+import armory from "../assets/images/link.png";
 function Roster() {
   const [data, setData] = useState({ members: [] });
   // const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 14;
+  const itemsPerPage = 11;
+  const url = 'http://localhost:3001';
 
   // const handleFetchAndSaveData = async () => {
   //   if (loading) {
@@ -30,7 +33,7 @@ function Roster() {
   const fetchData = async () => {
     console.log('Imherein2');
     try {
-      const response = await fetch('/api/data');
+      const response = await fetch(`${url}/api/data`);
   
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -66,17 +69,51 @@ function Roster() {
   const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
   console.log(data);
   return (
+    <section className="roster">
     <div className="data">
-      <h1>Sweatshop Roster</h1>
+      <h1>Sweatshop Leaders</h1>
+      <div className='leaders'>
+        <ul>
+        <li>
+        <h2>Founder</h2>
+        <p>Zujo</p>
+        </li>
+        <li>
+        <h2>Co-Founders</h2>
+        <p>Layton</p>
+        <p>Ciz</p>
+        </li>
+        <li>
+        <h2>Officers</h2>
+        <p>N/A</p>
+        </li>
+        </ul>
+        </div>
       {/* <button onClick={handleFetchAndSaveData} disabled={loading}>
         {loading ? 'Fetching...' : 'Fetch and Save Data'}
       </button> */}
+      <h2>Members</h2>      
+      <div className="pagination">
+        {pageNumbers.map((number) => (
+          <button key={number} onClick={() => setCurrentPage(number)}>
+            {number}
+          </button>
+        ))}
+        {totalPages > 3 && currentPage < totalPages - 2 && (
+          <>
+            <button onClick={() => setCurrentPage(totalPages - 1)}>{totalPages - 1}</button>
+            <button onClick={() => setCurrentPage(totalPages)}>{totalPages}</button>
+          </>
+        )}
+      </div>
       <table>
         <thead>
           <tr>
             <th>Rank</th>
             <th>Name</th>
             <th>Level</th>
+            <th>Class</th>
+            <th>Armory</th>
           </tr>
         </thead>
         <tbody>
@@ -101,24 +138,45 @@ function Roster() {
               </td>
               <td>{member.character.name}</td>
               <td>{member.character.level}</td>
+              <td>{member.character.playable_class.id === 1 
+                  ? 'Warrior'
+                  :member.character.playable_class.id === 2 
+                  ? 'Paladin'
+                  :member.character.playable_class.id === 3
+                  ? 'Hunter'
+                  :member.character.playable_class.id === 4
+                  ? 'Rogue'
+                  :member.character.playable_class.id === 5
+                  ? 'Priest'
+                  :member.character.playable_class.id === 6
+                  ? 'Death Knight'
+                  :member.character.playable_class.id === 7
+                  ? 'Shaman'
+                  :member.character.playable_class.id === 8
+                  ? 'Mage'
+                  :member.character.playable_class.id === 9
+                  ? 'Warlock'
+                  :member.character.playable_class.id === 10
+                  ? 'Monk'
+                  :member.character.playable_class.id === 11
+                  ? 'Druid'
+                  :member.character.playable_class.id === 12
+                  ? 'Demon Hunter'
+                  :member.character.playable_class.id === 13
+                  ? 'Evoker'
+                  :'Unknown'}</td>
+              <td>
+                <a href={`https://worldofwarcraft.com/en-us/character/us/${member.character.realm.slug}/${member.character.name}`} >
+                  <img src={armory} alt="Armory" className='arm-icon'/>
+                </a> 
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
-      <div className="pagination">
-        {pageNumbers.map((number) => (
-          <button key={number} onClick={() => setCurrentPage(number)}>
-            {number}
-          </button>
-        ))}
-        {totalPages > 3 && currentPage < totalPages - 2 && (
-          <>
-            <button onClick={() => setCurrentPage(totalPages - 1)}>{totalPages - 1}</button>
-            <button onClick={() => setCurrentPage(totalPages)}>{totalPages}</button>
-          </>
-        )}
-      </div>
+
     </div>
+    </section>
   );
 }
 

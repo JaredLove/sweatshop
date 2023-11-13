@@ -13,14 +13,14 @@ function App() {
     
   return (
   
-      <body>     
+      <div>     
       
-      <header>
+
       <Header
           currentPage={currentPage}
           handlePageChange={handlePageChange}
       ></Header>
-      </header>
+
         <main>
             <Splash />
             <About />
@@ -30,7 +30,7 @@ function App() {
 
         </footer>
       </main>  
-    </body>
+    </div>
   );
 }
 
