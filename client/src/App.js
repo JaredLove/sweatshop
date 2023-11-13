@@ -12,7 +12,7 @@ function App() {
 
     
   return (
-    <div>     
+  
       <body>     
       
       <header>
@@ -31,7 +31,6 @@ function App() {
         </footer>
       </main>  
     </body>
-    </div>
   );
 }
 

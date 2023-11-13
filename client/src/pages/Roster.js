@@ -1,8 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import "./roster.css";
-// const API_URL = 'https://neon-sunshine-4a5699.netlify.app';
 function Roster() {
   const [data, setData] = useState({ members: [] });
   // const [loading, setLoading] = useState(false);
@@ -30,16 +27,21 @@ function Roster() {
   }, []);
 
 
-  const fetchData = async () => {    
-    console.log('Imherein2')
+  const fetchData = async () => {
+    console.log('Imherein2');
     try {
-
-      const response = await axios.get(`/api/data`);
-      console.log('Response:', response.data);
+      const response = await fetch('/api/data');
   
-      if (response.data.length > 0) {
-        setData(response.data[0]);
-        console.log('Imherein2')
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+  
+      const data = await response.json();
+      console.log('Response:', data);
+  
+      if (data.length > 0) {
+        setData(data[0]);
+        console.log('Imherein2');
       }
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -66,41 +68,9 @@ function Roster() {
   return (
     <div className="data">
       <h1>Sweatshop Roster</h1>
-
-      <div className='first-roster'>
-          <ul>
-            <li>
-          <h2>Founder</h2>
-          <p>Zujo</p>
-          </li>
-          <li>
-          <h2>Co - Founders</h2>
-          <p>Layton</p>
-          <p>Ciz</p>
-          </li>
-          <li>
-          <h2>Officers</h2>
-          <p>N/A</p>
-          </li>
-          </ul>
-        </div>
       {/* <button onClick={handleFetchAndSaveData} disabled={loading}>
         {loading ? 'Fetching...' : 'Fetch and Save Data'}
       </button> */}
-      <h1>Guild Roster</h1>      
-      <div className="pagination">
-        {pageNumbers.map((number) => (
-          <button key={number} onClick={() => setCurrentPage(number)}>
-            {number}
-          </button>
-        ))}
-        {totalPages > 3 && currentPage < totalPages - 2 && (
-          <>
-            <button onClick={() => setCurrentPage(totalPages - 1)}>{totalPages - 1}</button>
-            <button onClick={() => setCurrentPage(totalPages)}>{totalPages}</button>
-          </>
-        )}
-      </div>
       <table>
         <thead>
           <tr>
@@ -135,7 +105,19 @@ function Roster() {
           ))}
         </tbody>
       </table>
-
+      <div className="pagination">
+        {pageNumbers.map((number) => (
+          <button key={number} onClick={() => setCurrentPage(number)}>
+            {number}
+          </button>
+        ))}
+        {totalPages > 3 && currentPage < totalPages - 2 && (
+          <>
+            <button onClick={() => setCurrentPage(totalPages - 1)}>{totalPages - 1}</button>
+            <button onClick={() => setCurrentPage(totalPages)}>{totalPages}</button>
+          </>
+        )}
+      </div>
     </div>
   );
 }
