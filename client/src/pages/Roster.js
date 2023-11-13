@@ -33,7 +33,7 @@ function Roster() {
   const fetchData = async () => {
     console.log('Imherein2');
     try {
-      const response = await fetch(`${url}/api/data`);
+      const response = await fetch(`/api/data`);
   
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
