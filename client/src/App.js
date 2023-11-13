@@ -22,7 +22,7 @@ function App() {
       ></Header>
       </header>
         <main>
-            <Splash />
+            {/* <Splash /> */}
             <Home />
             <About />
         <footer>

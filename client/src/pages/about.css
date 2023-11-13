@@ -1,6 +1,6 @@
 .about-section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -16,11 +16,16 @@
     height: 100%;
     color: #fff;
   }
+
+  .about-section-container {
+    display: flex;
+    flex-direction: row;
+  }
   
   
 .about-section-p p {
     font-size: 1.5rem;
-    width: 50ch;
+    width: 55ch;
   }
 
   .about-icons {
@@ -32,9 +37,18 @@
 
 
   .about-section img {
-    width: 40%;
-    height: 40%;
+    width: 50px;
+    height: 50px;
     border-radius: 10px;
+    margin: 0 20px;
+  }
+
+  .inner-icons-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 20px;
   }
 
   

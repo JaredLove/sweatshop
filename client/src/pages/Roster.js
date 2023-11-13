@@ -33,7 +33,7 @@ function Roster() {
     console.log('Imherein2')
     try {
 
-      const response = await axios.get(`${API_URL}/api/data`);
+      const response = await axios.get(`/api/data`);
       console.log('Response:', response.data);
   
       if (response.data.length > 0) {
