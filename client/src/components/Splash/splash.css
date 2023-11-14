@@ -112,21 +112,21 @@
   
   .sliding-background-up {
     background: repeat-y;
-    background-size: auto;
+    background-size: 95% auto; /* Set width to 100% and height to auto */
     height: 11013px; /* The image height times 3 */
     max-width: 630px;
-    min-width: 630px;
-    animation: bgSlideUp 30s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
+    min-width: 330px;
+    animation: bgSlideUp 120s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
   }
   
   .sliding-background-down {
 
     background: repeat-y;
-    background-size: auto;
+    background-size: 95% auto;
     height: 11013px; /* The image height times 3 */
     max-width: 630px;
-    min-width: 630px;
-    animation: bgSlideDown 30s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
+    min-width: 330px;
+    animation: bgSlideDown 120s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
   }
   
   /* .sliding-background-down:hover,
@@ -176,14 +176,11 @@ display: none;
     
     .sliding-background-down {
   
-      margin-left: 0;
       background: repeat-y;
       background-size: auto;
       height: 11013px; /* The image height times 3 */
-      max-width: 630px;
-      min-width: 400px;
-      background-position: -150px 300px;
-      animation: bgSlideDown 30s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
+      width: 400px;
+      animation: bgSlideDown 120s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
     }
     
   }
@@ -191,26 +188,23 @@ display: none;
 
   @media screen and (max-width: 1600px) {
 
-    .sliding-background-down {
-  
-      margin-left: 0;
-      background: repeat-y;
-      background-size: auto;
-      height: 11013px; /* The image height times 3 */
-      max-width: 630px;
-      min-width: 530px;
-      background-position: -90px;
-      animation: bgSlideDown 30s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
-    }
-
     .sliding-background-up {
       background: repeat-y;
-      background-size: auto;
+      background-size: 95% auto; /* Set width to 100% and height to auto */
       height: 11013px; /* The image height times 3 */
       max-width: 630px;
-      min-width: 530px;
-      background-position: -90px;
-      animation: bgSlideUp 30s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
+      min-width: 330px;
+      animation: bgSlideUp 120s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
+    }
+    
+    .sliding-background-down {
+  
+      background: repeat-y;
+      background-size: 95% auto;
+      height: 11013px; /* The image height times 3 */
+      max-width: 630px;
+      min-width: 330px;
+      animation: bgSlideDown 120s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
     }
 
   }

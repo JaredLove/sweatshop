@@ -2,9 +2,9 @@ import React from "react";
 import slide0 from "../../assets/images/fullimg1.jpg";
 import slide1 from "../../assets/images/fullimg2.jpg";
 import slide2 from "../../assets/images/fullimg3.jpg";
-// import slide5 from "../../assets/images/slide2.jpg";
-// import slide6 from "../../assets/images/slide2.jpg";
-// import slide7 from "../../assets/images/splash1.jpg";
+import slide5 from "../../assets/images/fullimg3.jpg";
+import slide6 from "../../assets/images/fullimg3.jpg";
+import slide7 from "../../assets/images/fullimg3.jpg";
 
 import "./splash.css";
 function Splash() {
@@ -12,6 +12,9 @@ function Splash() {
     slide0,
     slide1,
     slide2,
+    slide5,
+    slide6,
+    slide7,
 
 
   ];
