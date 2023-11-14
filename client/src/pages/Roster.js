@@ -1,7 +1,102 @@
 
 import React, { useState, useEffect } from 'react';
+import Pagination from '../components/Pagination';
 import './roster.css';
 import armory from "../assets/images/link.png";
+// icons
+import warrior from "../assets/icons/classicon_warrior.jpg";
+import dk from "../assets/icons/classicon_deathknight.jpg";
+import druid from "../assets/icons/classicon_druid.jpg";
+import hunter from "../assets/icons/classicon_hunter.jpg";
+import mage from "../assets/icons/classicon_mage.jpg";
+import monk from "../assets/icons/classicon_monk.jpg";
+import paladin from "../assets/icons/classicon_paladin.jpg";
+import priest from "../assets/icons/classicon_priest.jpg";
+import rogue from "../assets/icons/classicon_rogue.jpg";
+import shaman from "../assets/icons/classicon_shaman.jpg";
+import warlock from "../assets/icons/classicon_warlock.jpg";
+import demonhunter from "../assets/icons/classicon_demonhunter.jpg";
+import evoker from "../assets/icons/classicon_evoker.jpg";
+
+//races
+// import alliance from "../assets/races/Alliance_15.jpg";
+// import horde from "../assets/races/Horde_15.jpg";
+
+import humanMale from "../assets/races/human-male.jpg";
+// import humanFemale from "../assets/races/human-female.jpg";
+
+import bloodMale from "../assets/races/bloodelf-male.jpg";
+// import bloodFemale from "../assets/races/bloodelf-female.jpg";
+
+// import darkIronFemale from "../assets/races/DarkIron_Female.jpg";
+import darkIronMale from "../assets/races/DarkIron_Male.jpg";
+
+// import dreaneiFemale from "../assets/races/draenei-female.jpg";
+import dreaneiMale from "../assets/races/draenei-male.jpg";
+
+//import dwarfFemale from "../assets/races/dwarf-female.jpg";
+import dwarfMale from "../assets/races/dwarf-male.jpg";
+
+//import gnomeFemale from "../assets/races/gnome-female.jpg";
+import gnomeMale from "..//assets/races/gnome-male.jpg";
+
+//import gobFemale from "../assets/races/goblin-female.jpg";
+import gobMale from "../assets/races/goblin-male.jpg";
+
+//import hmFemale from "../assets/races/Highmountain_Female.jpg";
+import hmMale from "../assets/races/Highmountain_Male.jpg";
+
+//import junkerFemale from "../assets/races/Junker_Female.jpg";
+import junkerMale from "../assets/races/Junker_Male.jpg";
+
+//import ktFemale from "../assets/races/KulTiran_Female.jpg";
+import ktMale from "../assets/races/KulTiran_Male.jpg";
+
+//import lfFemale from "../assets/races/Lightforged_Female.jpg";
+import lfMale from "../assets/races/Lightforged_Male.jpg";
+
+//import nbFemale from "../assets/races/Nightborne_Female.jpg";
+import nbMale from "../assets/races/Nightborne_Male.jpg";
+
+//import nfFemale from "../assets/races/nightelf-female.jpg";
+import nfMale from "../assets/races/nightelf-male.jpg";
+
+//import orcFemale from "../assets/races/orc-female.jpg";
+import orcMale from "../assets/races/orc-male.jpg";
+
+//import orcBrownFemale from "../assets/races/OrcBrown_Female.jpg";
+import orcBrownmale from "../assets/races/OrcBrown_Male.jpg";
+
+//import taurenFemale from "../assets/races/tauren-female.jpg";
+import taurenMale from "../assets/races/tauren-male.jpg";
+
+//import trollFemale from "../assets/races/troll-female.jpg";
+import trollMale from "../assets/races/troll-male.jpg";
+
+//import undeadFemale from "../assets/races/undead-female.jpg";
+import undeadMale from "../assets/races/undead-male.jpg";
+
+//import voidFemale from "../assets/races/VoidElf_Female.jpg";
+import voidMale from "../assets/races/VoidElf_Male.jpg";
+
+//import vulFemale from "../assets/races/Vulpera_Female.jpg";
+import vulMale from "../assets/races/Vulpera_Male.jpg";
+
+//import worgenFemale from "../assets/races/worgen-female.jpg";
+import worgenMale from "../assets/races/worgen-male.jpg";
+
+//import zandaFemale from "../assets/races/Zandalari_Female.jpg";
+import zandaMale from "../assets/races/Zandalari_Male.jpg";
+
+//import pandaFemale from "../assets/races/Pandaren_Female.jpg";
+import pandaMale from "../assets/races/Pandaren_Male.jpg"
+
+//import dragFemale from "../assets/races/Dracthyr_Female.jpg";
+import dragMale from "../assets/races/Dracthyr_Male.jpg"
+
+
+
+
 function Roster() {
   const [data, setData] = useState({ members: [] });
   // const [loading, setLoading] = useState(false);
@@ -26,12 +121,10 @@ function Roster() {
   // };
   useEffect(() => {
     fetchData();
-    console.log('Imhere')
   }, []);
 
 
   const fetchData = async () => {
-    console.log('Imherein2');
     try {
       const response = await fetch(`/api/data`);
   
@@ -40,11 +133,10 @@ function Roster() {
       }
   
       const data = await response.json();
-      console.log('Response:', data);
+      // console.log('Response:', data);
   
       if (data.length > 0) {
         setData(data[0]);
-        console.log('Imherein2');
       }
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -66,8 +158,8 @@ function Roster() {
   const totalPages = Math.ceil(members.length / itemsPerPage);
 
   // Create an array of page numbers (1, 2, 3, ...)
-  const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
-  console.log(data);
+  // const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
+  // console.log(data);
   return (
     <section className="roster">
     <div className="data">
@@ -94,26 +186,21 @@ function Roster() {
       </button> */}
       <h2>Members</h2>      
       <div className="pagination">
-        {pageNumbers.map((number) => (
-          <button key={number} onClick={() => setCurrentPage(number)}>
-            {number}
-          </button>
-        ))}
-        {totalPages > 3 && currentPage < totalPages - 2 && (
-          <>
-            <button onClick={() => setCurrentPage(totalPages - 1)}>{totalPages - 1}</button>
-            <button onClick={() => setCurrentPage(totalPages)}>{totalPages}</button>
-          </>
-        )}
-      </div>
+          {/* Pagination component */}
+          {/* Pass the necessary props to the Pagination component */}
+          <Pagination
+            totalPages={totalPages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+          />
+        </div>
       <table>
         <thead>
           <tr>
             <th>Rank</th>
             <th>Name</th>
             <th>Level</th>
-            <th>Class</th>
-            <th>Armory</th>
+            <th>Info</th>
           </tr>
         </thead>
         <tbody>
@@ -139,37 +226,92 @@ function Roster() {
               <td>{member.character.name}</td>
               <td>{member.character.level}</td>
               <td>{member.character.playable_class.id === 1 
-                  ? 'Warrior'
+                  ? <img src={warrior} alt="Warrior"  className='arm-icon'/>
                   :member.character.playable_class.id === 2 
-                  ? 'Paladin'
+                  ? <img src={paladin} alt="Paladin"  className='arm-icon'/>
                   :member.character.playable_class.id === 3
-                  ? 'Hunter'
+                  ? <img src={hunter} alt="Hunter"  className='arm-icon'/>
                   :member.character.playable_class.id === 4
-                  ? 'Rogue'
+                  ? <img src={rogue} alt="Rogue"  className='arm-icon'/>
                   :member.character.playable_class.id === 5
-                  ? 'Priest'
+                  ? <img src={priest} alt="Priest"  className='arm-icon'/>
                   :member.character.playable_class.id === 6
-                  ? 'Death Knight'
+                  ? <img src={dk} alt="Death Knight"  className='arm-icon'/>
                   :member.character.playable_class.id === 7
-                  ? 'Shaman'
+                  ? <img src={shaman} alt="Shaman"  className='arm-icon'/>
                   :member.character.playable_class.id === 8
-                  ? 'Mage'
+                  ? <img src={mage} alt="Mage"  className='arm-icon'/>
                   :member.character.playable_class.id === 9
-                  ? 'Warlock'
+                  ? <img src={warlock} alt="Warlock"  className='arm-icon'/>
                   :member.character.playable_class.id === 10
-                  ? 'Monk'
+                  ? <img src={monk} alt="Monk"  className='arm-icon'/>
                   :member.character.playable_class.id === 11
-                  ? 'Druid'
+                  ? <img src={druid} alt="Druid"  className='arm-icon'/>
                   :member.character.playable_class.id === 12
-                  ? 'Demon Hunter'
+                  ? <img src={demonhunter} alt="Demon Hunter"  className='arm-icon'/>
                   :member.character.playable_class.id === 13
-                  ? 'Evoker'
-                  :'Unknown'}</td>
-              <td>
-                <a href={`https://worldofwarcraft.com/en-us/character/us/${member.character.realm.slug}/${member.character.name}`} >
-                  <img src={armory} alt="Armory" className='arm-icon'/>
-                </a> 
-              </td>
+                  ? <img src={evoker} alt="Evoker"  className='arm-icon'/>
+                  :'Unknown'}               
+                  <a href={`https://worldofwarcraft.com/en-us/character/us/${member.character.realm.slug}/${member.character.name}`} >
+                  <img src={armory} alt="Armory" className='arm-icon'/></a> 
+                  
+                  {member.character.playable_race.id === 1 
+                  ? <img src={humanMale} alt='human' />
+                  : member.character.playable_race.id === 8
+                  ? <img src={trollMale} alt='troll' />
+                  : member.character.playable_race.id === 11
+                  ? <img src={dreaneiMale} alt='Draenei' />
+                  : member.character.playable_race.id === 10
+                  ? <img src={bloodMale} alt='humanMale' />
+                  : member.character.playable_race.id === 4
+                  ? <img src={nfMale} alt='humanMale' />
+                  : member.character.playable_race.id === 3
+                  ? <img src={dwarfMale} alt='humanMale' />
+                  : member.character.playable_race.id === 6
+                  ? <img src={taurenMale} alt='humanMale' />
+                  : member.character.playable_race.id === 5
+                  ? <img src={undeadMale} alt='humanMale' />
+                  : member.character.playable_race.id === 2
+                  ? <img src={orcMale} alt='humanMale' />
+                  : member.character.playable_race.id === 7
+                  ? <img src={gnomeMale} alt='humanMale' />
+                  : member.character.playable_race.id === 31
+                  ? <img src={zandaMale} alt='humanMale' />
+                  : member.character.playable_race.id === 9
+                  ? <img src={gobMale} alt='humanMale' />
+                  : member.character.playable_race.id === 32
+                  ? <img src={ktMale} alt='humanMale' />
+                  : member.character.playable_race.id === 30
+                  ? <img src={lfMale} alt='humanMale' />
+                  : member.character.playable_race.id === 28
+                  ? <img src={hmMale} alt='humanMale' />
+                  : member.character.playable_race.id === 27
+                  ? <img src={nbMale} alt='humanMale' />
+                  : member.character.playable_race.id === 22
+                  ? <img src={worgenMale} alt='humanMale' />
+                  : member.character.playable_race.id === 34
+                  ? <img src={darkIronMale} alt='humanMale' />
+                  : member.character.playable_race.id === 35
+                  ? <img src={vulMale} alt='humanMale' />
+                  : member.character.playable_race.id === 36
+                  ? <img src={orcBrownmale} alt='humanMale' />
+                  : member.character.playable_race.id === 24
+                  ? <img src={pandaMale} alt='humanMale' />
+                  : member.character.playable_race.id === 26
+                  ? <img src={pandaMale} alt='humanMale' />
+                  : member.character.playable_race.id === 29
+                  ? <img src={voidMale} alt='humanMale' />
+                  : member.character.playable_race.id === 52
+                  ? <img src={dragMale} alt='humanMale' />
+                  : member.character.playable_race.id === 70
+                  ? <img src={dragMale} alt='humanMale' />
+                  : member.character.playable_race.id === 37
+                  ? <img src={junkerMale} alt='humanMale' />
+                  : member.character.playable_race.id === 25
+                  ? <img src={pandaMale} alt='humanMale' />
+                  :'Unknown'} 
+                  </td> 
+
             </tr>
           ))}
         </tbody>

@@ -1,27 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
-import logo from '../../assets/images/highres.png'
-const Header = ({ currentPage, handlePageChange}) => {
-    return (
-        <div>
-        <header>
-        <nav>
-            <div className="logo-container">
-                <img src={logo} alt="logo" className="logo" />
-            </div>
-            <div>
-            <ul>
-                <li><button  onClick={() => {handlePageChange('home');}}>Home</button></li>
-                <li><button  onClick={() => {handlePageChange('about');}}>About Us</button></li>
-                <li><button  onClick={() => {handlePageChange('roster');}}>Roster</button></li>
-                <li><button  onClick={() => {handlePageChange('contact');}}>Join Us</button></li>
-            </ul>
-            </div>
-        </nav> 
-        </header>
-       
-        </div>
-    );
-}   
+import logo from '../../assets/images/highres.png';
+
+const Header = ({ currentPage, handlePageChange }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  return (
+    <div>
+      <header>
+        <nav className={menuOpen ? "navbar open" : "navbar"}>
+          <div className="logo-container">
+            <img src={logo} alt="logo" className="logo" />
+          </div>
+          <div className="menu-icon" onClick={toggleMenu}>
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </div>
+          <ul className={menuOpen ? "nav-links open" : "nav-links"}>
+          <li><a href="#home"><button  onClick={() => {setMenuOpen(false);}}>Home</button></a></li>
+                <li><a href="#about"><button  onClick={() => {setMenuOpen(false);}}>About Us</button></a></li>
+                <li><a href="#roster"><button  onClick={() => {setMenuOpen(false);}}>Roster</button></a></li>
+                <li><a href="#contact"><button  onClick={() => {setMenuOpen(false);}}>Join Us</button></a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  );
+}
 
 export default Header;

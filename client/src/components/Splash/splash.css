@@ -114,17 +114,20 @@
     background: repeat-y;
     background-size: auto;
     height: 11013px; /* The image height times 3 */
-    max-width: 650px;
-    min-width: 650px;
+    max-width: 630px;
+    min-width: 630px;
     animation: bgSlideUp 30s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
+    margin-left: 10px;
   }
   
   .sliding-background-down {
+
+    margin-left: 10px;
     background: repeat-y;
     background-size: auto;
     height: 11013px; /* The image height times 3 */
-    max-width: 650px;
-    min-width: 650px;
+    max-width: 630px;
+    min-width: 630px;
     animation: bgSlideDown 30s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
   }
   
@@ -159,3 +162,30 @@
   
   /* ---  END  --- */
   /* BACKGROUND SLIDESHOW CSS */
+  
+
+  @media screen and (max-width: 768px) {
+    .jumbo-content {
+      margin-top: 400px;
+    }
+    .jumbo-content h1 {
+      font-size: 2rem;
+    }
+
+    .sliding-background-up {
+display: none;
+    }
+    
+    .sliding-background-down {
+  
+      margin-left: 0;
+      background: repeat-y;
+      background-size: auto;
+      height: 11013px; /* The image height times 3 */
+      max-width: 630px;
+      min-width: 400px;
+      background-position: -150px 300px;
+      animation: bgSlideDown 30s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
+    }
+    
+  }

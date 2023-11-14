@@ -22,13 +22,18 @@ function App() {
       ></Header>
 
         <main>
+          <section id='home'>
             <Splash />
+          </section>
+          <section id='about'>
             <About />
+            </section>
+            <section id='roster'>
             <Roster />
+            </section>
+            <section id='contact'>
             <Contact />
-        <footer>
-
-        </footer>
+            </section>
       </main>  
     </div>
   );
