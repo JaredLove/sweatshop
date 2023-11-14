@@ -114,18 +114,18 @@
     background: repeat-y;
     background-size: auto;
     height: 11013px; /* The image height times 3 */
-    max-width: 430px;
-    min-width: 430px;
-    animation: bgSlideUp 120s linear infinite;
+    max-width: 650px;
+    min-width: 650px;
+    animation: bgSlideUp 30s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
   }
   
   .sliding-background-down {
     background: repeat-y;
     background-size: auto;
     height: 11013px; /* The image height times 3 */
-    max-width: 430px;
-    min-width: 430px;
-    animation: bgSlideDown 120s linear infinite;
+    max-width: 650px;
+    min-width: 650px;
+    animation: bgSlideDown 30s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
   }
   
   /* .sliding-background-down:hover,
@@ -134,21 +134,28 @@
   } */
   
   @keyframes bgSlideUp {
-    0%, 100% {
+    0% {
       transform: translate3d(0, 0, 0);
     }
     50% {
       transform: translate3d(0, -1835.5px, 0); /* Half of the image height */
     }
+    100% {
+      transform: translate3d(0, -3671px, 0);
+    }
   }
   
   @keyframes bgSlideDown {
-    0%, 100% {
+    0% {
       transform: translate3d(0, -3671px, 0);
     }
     50% {
       transform: translate3d(0, -1835.5px, 0); /* Half of the image height */
     }
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
   }
+  
   /* ---  END  --- */
   /* BACKGROUND SLIDESHOW CSS */

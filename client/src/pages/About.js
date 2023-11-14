@@ -3,7 +3,6 @@ import "./about.css";
 import glad from "../assets/images/elite.png";
 import rbgs from "../assets/images/rbgs.png";
 
-
 const About = () => {
 
     return (

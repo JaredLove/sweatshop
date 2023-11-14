@@ -7,7 +7,7 @@ function Roster() {
   // const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 11;
-  const url = 'http://localhost:3001';
+  // const url = 'http://localhost:3001';
 
   // const handleFetchAndSaveData = async () => {
   //   if (loading) {
