@@ -14,7 +14,7 @@ const guildSchema = new mongoose.Schema({
       id: Number,
       slug: String,
     },
-    faction: String, // Define faction as a string
+    faction: String,
   },
   members: [
     {
@@ -45,9 +45,21 @@ const guildSchema = new mongoose.Schema({
           id: Number,
         },
         rank: Number,
+        additionalData: {
+          gender: String,
+          faction: String,
+          activeSpec: String,
+          assets: [
+            {
+              key: String,
+              value: String,
+            },
+          ],
+        },
       },
     },
   ],
 });
+
 
 module.exports = mongoose.model('Guild', guildSchema);

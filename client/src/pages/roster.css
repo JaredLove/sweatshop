@@ -28,18 +28,36 @@
   
   table {
     border-collapse: collapse;
-    width: 50%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: 1000px;
+    height: 100%;
+    table-layout: fixed;
+    font-size: 1.2rem;
+  }
+  td {
+    overflow: hidden; /* or scroll, auto, etc. */
   }
   
   th, td {
     border: 1px solid black;
     padding: 5px;
     text-align: left;
+    width: 100px; /* Set your desired width */
+    overflow: hidden;
+    height: 50px;
   }
 
+  tr:nth-child(even) {
+   background-color: #1b1b1b;
+  }
+
+    .name {
+      position: relative;
+      bottom: 12px;
+      left: 20px;
+  
+    }
   .first-roster ul {
     display: flex;
     flex-direction: row;
@@ -69,6 +87,18 @@
   .arm-icon {
       width: 20px;
       height: 20px;
+  }
+
+  #arm-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+
+  .profile-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
   }
 
   

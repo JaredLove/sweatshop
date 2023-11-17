@@ -41,9 +41,11 @@ function Splash() {
     {/* <div className="jumbo-positioner">
         <div className="jumbo-center">
           <div className="jumbo-content">
+    
             <h1 className="fs-2">Keeping It Sweaty Since 2020</h1>
-            <button class="bn632-hover bn26">Button</button>
-          </div>
+            <button className="bn632-hover bn26">Button</button>
+          </div>        
+          <div className="jumbo-background"></div>
         </div>
       </div> */}
     </div>

@@ -16,13 +16,12 @@
     width: 100%;
   }
   .jumbo-positioner {
-    pointer-events: none;
     position: absolute;
     width: 100%;
     height: 100%;
     /* padding: 35vh 0 0 0; */
   }
-  
+
   .jumbo-center {
     display: flex;
     align-items: center;
@@ -34,19 +33,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(19, 23,45, 0.5);
-    margin-top: 600px;
+    justify-content: center;
+    position: relative;
+    top: 300px;
     width: 100%;
     height: 40%;
   }
+  
+  .jumbo-background {
+    background-color: #111529; /* Set the starting background color */
+    box-shadow: 0 0 20px 30px #111529; /* Set the box shadow to match the starting background color */
+    opacity: 0.8;
+    transition: background-color 0.5s, box-shadow 0.5s, opacity 0.5s; /* Add a transition for a smooth effect */
+    position: absolute;
+    width: 100%;
+    height: 300px;
+  }
+  
   .jumbo-content h1 {
-    font-size: 3rem;    
-    font-weight: 700;  
+    font-size: 3rem;
+    font-weight: 700;
     color: #fff;
     text-align: center;
-    font-family: "Avenir Next World","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-family: "Avenir Next World", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 
+
+  
+  
   .bn632-hover {
     width: 160px;
     font-size: 16px;
@@ -99,6 +113,7 @@
   #splash {
     max-height: 90vh;
     background-color: var(--bg-color-primary);
+    z-index: -2;
   }
   
   .back-full-container {
@@ -109,24 +124,28 @@
   .back-container {
     overflow: hidden;
   }
+
+  .sliding-background-up,
+.sliding-background-down {
+  z-index: -2; /* Set z-index to make sure the slideshow is behind everything */
+}
   
   .sliding-background-up {
-    background: repeat-y;
+    background-repeat: repeat-y;
     background-size: 95% auto; /* Set width to 100% and height to auto */
     height: 11013px; /* The image height times 3 */
     max-width: 630px;
     min-width: 330px;
-    animation: bgSlideUp 120s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
+    animation: bgSlideUp 150s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
   }
   
   .sliding-background-down {
-
-    background: repeat-y;
+    background-repeat: repeat-y;
     background-size: 95% auto;
     height: 11013px; /* The image height times 3 */
     max-width: 630px;
     min-width: 330px;
-    animation: bgSlideDown 120s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
+    animation: bgSlideDown 150s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
   }
   
   /* .sliding-background-down:hover,
@@ -137,12 +156,16 @@
   @keyframes bgSlideUp {
     0% {
       transform: translate3d(0, 0, 0);
+
     }
     50% {
       transform: translate3d(0, -1835.5px, 0); /* Half of the image height */
+
+
     }
     100% {
       transform: translate3d(0, -3671px, 0);
+
     }
   }
   
@@ -157,6 +180,7 @@
       transform: translate3d(0, 0, 0);
     }
   }
+
   
   /* ---  END  --- */
   /* BACKGROUND SLIDESHOW CSS */
@@ -175,7 +199,6 @@ display: none;
     }
     
     .sliding-background-down {
-  
       background: repeat-y;
       background-size: auto;
       height: 11013px; /* The image height times 3 */
