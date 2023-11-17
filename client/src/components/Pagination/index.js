@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './pagi.css';
 const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
   const visiblePages = 5; // Number of pages to show at a time
 

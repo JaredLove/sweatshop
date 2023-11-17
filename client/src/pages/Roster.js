@@ -103,7 +103,7 @@ function Roster() {
   // const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 11;
-  const url = 'http://localhost:3001';
+  // const url = 'http://localhost:3001';
 
   // const handleFetchAndSaveData = async () => {
   //   if (loading) {
@@ -185,8 +185,9 @@ function Roster() {
       {/* <button onClick={handleFetchAndSaveData} disabled={loading}>
         {loading ? 'Fetching...' : 'Fetch and Save Data'}
       </button> */}
-      <h2>Members</h2>      
-      <div className="pagination">
+          
+      <div className="pagination"> 
+      
           {/* Pagination component */}
           {/* Pass the necessary props to the Pagination component */}
           <Pagination
@@ -195,6 +196,10 @@ function Roster() {
             setCurrentPage={setCurrentPage}
           />
         </div>
+        <h2>Roster</h2> 
+        <div className='table-container'>
+
+
       <table>
         <thead>
           <tr>
@@ -385,7 +390,7 @@ function Roster() {
           ))}
         </tbody>
       </table>
-
+        </div>
     </div>
     </section>
   );
