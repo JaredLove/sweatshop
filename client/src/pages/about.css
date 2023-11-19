@@ -6,120 +6,191 @@
   width: 100%;
   height: 100%;
   color: #fff;
-  background-color: #19191a;
 }
-.about-section-p{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: #fff;
-  }
-  
-  
-.about-section-p p {
-    font-size: 1.5rem;
-    width: 80ch;
-  }
-
-  .about-icons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
 
-  .about-section img {
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-  }
 
   .about-section-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
   }
 
-  .icons-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-
-  .about-section ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
+  #zclose {
+    width: 500px;
+    height: 500px;
     
   }
 
-  .about-section li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 140px 0 80px;
+  #z-close {
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/zclose.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 700px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    margin: 0 10px;
+  }
+
+  #me-close {
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/messs.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 700px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    margin: 0 10px;
+  }
+
+  #ciz-close {
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/cizglass.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 700px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    margin: 0 10px;
+  }
+
+  #bub-close {
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/bubbaj.png");
+    background-size: cover;    
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 700px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    margin: 0 10px;
+
+  }
+
+  #lay-close {
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/laytonsham.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 700px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    margin: 0 10px;
   }
 
   
+  #pepe-close {
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/pepe.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 700px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    margin: 0 10px;
+  }
+
+
   
 
   @media screen and (max-width: 768px) {
-    .about-section-p p {
-      font-size: .7rem;
-      width: 50ch;
-    }
-
-    .about-section img {
-      width: 30px;
-      height: 30px;
-      border-radius: 10px;
-    }
-
-    .inner-icons-content p {
-      font-size: .7rem;
-      text-align: center;
-    }
-
-    .about-section li {
+    .about-section {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin: 10px;
+      width: 100%;
+      height: 100%;
+      color: #fff;
     }
-    .about-icons {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .icons-div ul li {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
     
-  .about-section ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    position: relative;
-    margin: 0;
-    right: 30px;
-  }
-  
+    
+    
+      .about-section-content {
+        display: flex;
+        flex-direction: column;
+      }
+    
+      #z-close {
+        background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/zclose.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 400px;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgba(0,0,0,1);
+        margin: 0 10px;
+      }
+    
+      #me-close {
+        background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/messs.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 400px;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgba(0,0,0,1);
+        margin: 0 10px;
+      }
+    
+      #ciz-close {
+        background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/cizglass.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 400px;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgba(0,0,0,1);
+        margin: 0 10px;
+      }
+    
+      #bub-close {
+        background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/bubbaj.png");
+        background-size: cover;    
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 400px;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgba(0,0,0,1);
+        margin: 0 10px;
+    
+      }
+    
+      #lay-close {
+        background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/laytonsham.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 400px;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgba(0,0,0,1);
+        margin: 0 10px;
+      }
+    
+      
+      #pepe-close {
+        background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/pepe.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 400px;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgba(0,0,0,1);
+        margin: 0 10px;
+      }
+    
   
   
   }

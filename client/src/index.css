@@ -12,7 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #2f2f30;
+  background-color:  #001f3f;
 }
 
 code {
@@ -26,12 +26,19 @@ code {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 40px 0;
 }
 .home-container h1 {
   font-size: 7rem;
   color: white;
   text-align: center;
   margin-top: 2rem;
+
+}
+.homeLogo{
+  width: 70%;
+  height: 70%;
+  border-radius: 20px;
 
 }
 

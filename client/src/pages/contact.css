@@ -5,12 +5,55 @@
     justify-content: center;
     height: 400px;
     color: #fff;
-    background-color: #19191a;
 }
 
+.contact-content {
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/ssphoto.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    border-radius: 20px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    width: 115ch;
+}
 
 .contact .icon {
     font-size: 5rem;
     margin: 0.5rem;
 }
 
+
+@media screen and (max-width: 768px) {
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 600px;
+        color: #fff;
+    }
+    
+    .contact-content {
+        background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/ssphoto.jpg");
+        background-size: cover;
+        background-position: center;
+        width: 80%;
+        border-radius: 20px;
+    }
+    
+    .contact p {
+        font-size: .9rem;
+        margin: 0.5rem;
+        width: 37ch;
+    }
+    
+    .contact .icon {
+        font-size: 5rem;
+        margin: 0.5rem;
+    }
+    
+}

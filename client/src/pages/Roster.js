@@ -102,8 +102,8 @@ function Roster() {
   const [data, setData] = useState({ members: [] });
   // const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 11;
-  // const url = 'http://localhost:3001';
+  const itemsPerPage = 15;
+  const url = 'http://localhost:3001';
 
   // const handleFetchAndSaveData = async () => {
   //   if (loading) {
@@ -185,7 +185,7 @@ function Roster() {
       {/* <button onClick={handleFetchAndSaveData} disabled={loading}>
         {loading ? 'Fetching...' : 'Fetch and Save Data'}
       </button> */}
-          
+        <h2>Roster</h2>   
       <div className="pagination"> 
       
           {/* Pagination component */}
@@ -196,7 +196,7 @@ function Roster() {
             setCurrentPage={setCurrentPage}
           />
         </div>
-        <h2>Roster</h2> 
+        
         <div className='table-container'>
 
 

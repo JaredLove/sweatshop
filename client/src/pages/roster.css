@@ -1,5 +1,5 @@
 .roster {
-  height: 160vh;
+  height: 100%;
 }
 
 .roster h2 {
@@ -42,9 +42,14 @@
 }
 
 .table-container {
+  background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/sscew.jpg");
+  background-position: center;
+  background-size: cover;
   max-height: 100%; /* Adjust the height as needed */
   overflow: auto;
-  width: 100%; /* Make sure it takes full width */
+  width: 80%; /* Make sure it takes full width */
+  border-radius: 20px;
+  height: 891px;
 }
 
 table {
@@ -87,6 +92,12 @@ tr:nth-child(even) {
 }
 
 .leaders {
+  background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/zrage.png");
+  background-position: center;
+  width: 80%;
+  height: 300px;
+  border-radius: 20px;
+    background-size: cover;
   display: flex;
   flex-direction: column;
 }
@@ -94,10 +105,10 @@ tr:nth-child(even) {
 .leaders ul {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .leaders ul li {
-  padding: 0 40px;
   list-style: none;
 }
 

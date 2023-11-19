@@ -111,7 +111,7 @@
   /* --- START --- */
   
   #splash {
-    max-height: 90vh;
+    max-height: 100vh;
     background-color: var(--bg-color-primary);
     z-index: -2;
   }
@@ -132,20 +132,20 @@
   
   .sliding-background-up {
     background-repeat: repeat-y;
-    background-size: 95% auto; /* Set width to 100% and height to auto */
+    background-size: 100% auto; /* Set width to 100% and height to auto */
     height: 11013px; /* The image height times 3 */
     max-width: 630px;
     min-width: 330px;
-    animation: bgSlideUp 150s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
+    animation: bgSlideUp 100s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
   }
   
   .sliding-background-down {
     background-repeat: repeat-y;
-    background-size: 95% auto;
+    background-size: 100% auto;
     height: 11013px; /* The image height times 3 */
     max-width: 630px;
     min-width: 330px;
-    animation: bgSlideDown 150s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
+    animation: bgSlideDown 100s cubic-bezier(0.4, 0.0, 0.2, 1) infinite alternate;
   }
   
   /* .sliding-background-down:hover,
