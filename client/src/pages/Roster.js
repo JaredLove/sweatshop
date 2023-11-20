@@ -127,7 +127,7 @@ function Roster() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`/api/data`);
+      const response = await fetch(`${url}/api/data`);
   
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
