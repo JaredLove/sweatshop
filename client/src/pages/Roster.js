@@ -95,6 +95,60 @@ import pandaMale from "../assets/races/Pandaren_Male.jpg"
 import dragFemale from "../assets/races/Dracthyr_Female.jpg";
 import dragMale from "../assets/races/Dracthyr_Male.jpg"
 
+// spec icons
+
+import arms from "../assets/spec/warrior/arms.png";
+import fury from "../assets/spec/warrior/fury.png";
+import prot from "../assets/spec/warrior/protection.png";
+
+import havoc from "../assets/spec/demonhunter/havoc.png";
+import vengeance from "../assets/spec/demonhunter/vengeance.png";
+
+import balance from "../assets/spec/druid/balance.png";
+import feral from "../assets/spec/druid/feral.png";
+import guardian from "../assets/spec/druid/guardian.png";
+import resto from "../assets/spec/druid/restoration.png";
+
+import bm from "../assets/spec/hunter/beastmastery.png";
+import mark from "../assets/spec/hunter/marksman.png";
+import surv from "../assets/spec/hunter/survival.png";
+
+import arcane from "../assets/spec/mage/arcane.png";
+import fire from "../assets/spec/mage/fire.png";
+import frost from "../assets/spec/mage/frost.png";
+
+import brew from "../assets/spec/monk/brewmaster.png";
+import mist from "../assets/spec/monk/mistweaver.png";
+import wind from "../assets/spec/monk/windwalker.png";
+
+import holy from "../assets/spec/paladin/holy.png";
+import protPal from "../assets/spec/paladin/protection.png";
+import ret from "../assets/spec/paladin/retribution.png";
+
+import disc from "../assets/spec/priest/discipline.png";
+import holyPriest from "../assets/spec/priest/holy.png";
+import shadow from "../assets/spec/priest/shadow.png";
+
+import aff from "../assets/spec/warlock/affliction.png";
+import demo from "../assets/spec/warlock/demonology.png";
+import destro from "../assets/spec/warlock/destruction.png";
+
+import blood from "../assets/spec/deathknight/blood.png";
+import frostDk from "../assets/spec/deathknight/frost.png";
+import unholy from "../assets/spec/deathknight/unholy.png";
+
+import ele from "../assets/spec/shaman/elemental.png";
+import enh from "../assets/spec/shaman/enhancement.png";
+import restoSham from "../assets/spec/shaman/restoration.png";
+
+import assrogue from "../assets/spec/rogue/assassination.png";
+import outlaw from "../assets/spec/rogue/outlaw.png";
+import sub from "../assets/spec/rogue/subtlety.png";
+
+
+
+
+
 
 
 
@@ -127,7 +181,7 @@ function Roster() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`/api/data`);
+      const response = await fetch(`${url}/api/data`);
   
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -240,8 +294,79 @@ function Roster() {
                   : member.character.additionalData.faction === 'HORDE'
                   ? <img src={horde} alt="Horde"  className='arm-icon'/>
                   : 'Unknown'}
-                {member.character.additionalData.activeSpec
-                  ? <img src={warrior} alt="Warrior"  className='arm-icon'/>
+                {member.character.additionalData.activeSpec === 'Arms'
+                  ? <img src={arms} alt="Warrior"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Fury'
+                  ? <img src={fury} alt="Warrior"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Protection'
+                  ? <img src={prot} alt="Warrior"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Elemental'
+                  ? <img src={ele} alt="Shaman"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Enhancement'
+                  ? <img src={enh} alt="Shaman"  className='arm-icon'/>
+                  :member.character.playable_class.id === 7 && member.character.additionalData.activeSpec === 'Restoration'
+                  ? <img src={restoSham} alt="Shaman"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Havoc'
+                  ? <img src={havoc} alt="Demon Hunter"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Vengeance'
+                  ? <img src={vengeance} alt="Demon Hunter"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Balance'
+                  ? <img src={balance} alt="Druid"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Feral'
+                  ? <img src={feral} alt="Druid"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Guardian'
+                  ? <img src={guardian} alt="Druid"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Restoration'
+                  ? <img src={resto} alt="Druid"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Beast Mastery'
+                  ? <img src={bm} alt="Hunter"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Marksmanship'
+                  ? <img src={mark} alt="Hunter"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Survival'
+                  ? <img src={surv} alt="Hunter"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Arcane'
+                  ? <img src={arcane} alt="Mage"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Fire'
+                  ? <img src={fire} alt="Mage"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Frost'
+                  ? <img src={frost} alt="Mage"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Brewmaster'
+                  ? <img src={brew} alt="Monk"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Mistweaver'
+                  ? <img src={mist} alt="Monk"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Windwalker'
+                  ? <img src={wind} alt="Monk"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Holy'
+                  ? <img src={holy} alt="Paladin"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Protection'
+                  ? <img src={protPal} alt="Paladin"  className='arm-icon'/> 
+                  :member.character.additionalData.activeSpec === 'Retribution'
+                  ? <img src={ret} alt="Paladin"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Discipline'
+                  ? <img src={disc} alt="Priest"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Holy'
+                  ? <img src={holyPriest} alt="Priest"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Shadow'
+                  ? <img src={shadow} alt="Priest"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Affliction'
+                  ? <img src={aff} alt="Warlock"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Demonology'
+                  ? <img src={demo} alt="Warlock"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Destruction'
+                  ? <img src={destro} alt="Warlock"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Blood'
+                  ? <img src={blood} alt="Death Knight"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Frost'
+                  ? <img src={frostDk} alt="Death Knight"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Unholy'
+                  ? <img src={unholy} alt="Death Knight"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Assassination'
+                  ? <img src={assrogue} alt="Rogue"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Outlaw'
+                  ? <img src={outlaw} alt="Rogue"  className='arm-icon'/>
+                  :member.character.additionalData.activeSpec === 'Subtlety'
+                  ? <img src={sub} alt="Rogue"  className='arm-icon'/>
+                  
                   : 'Unknown'}
                 {member.character.playable_class.id === 1 
                   ? <img src={warrior} alt="Warrior"  className='arm-icon'/>
