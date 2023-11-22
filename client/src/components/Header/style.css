@@ -2,7 +2,7 @@ header {
  
     position: fixed;
     height: 80px;
-    top: 10px;
+    top: 0;
     width: 100%;
     z-index: 1;
 
@@ -10,11 +10,10 @@ header {
 
 nav {
   background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../../assets/images/zrage.png");
-  width: 80%;
+  width: 100%;
     display: flex;
     justify-content: space-around;
     margin-top: 10px;    
-    border-radius: 30px;
     margin: 0 auto;
 }
 
@@ -99,7 +98,7 @@ nav ul li button {
  
       position: fixed;
       height: 80px;
-      top: 1px;
+      top: 0;
       width: 100%;
       z-index: 1;
   

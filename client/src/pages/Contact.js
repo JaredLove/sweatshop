@@ -7,7 +7,7 @@ import {faDiscord} from '@fortawesome/fontawesome-free-brands';
 const Contact = () => {
     
         return (
-            <section className="contact">
+            <footer className="contact">
                 <h1 id="work">Join Us</h1>
                 <div className="contact-content">
                     <p>
@@ -18,7 +18,7 @@ const Contact = () => {
                     <a href="https://discord.gg/gx4TTCFBU9"><FontAwesomeIcon icon={faDiscord} className="icon"/></a>
                 </p>
                 </div>
-            </section>
+            </footer>
         );
     };
 

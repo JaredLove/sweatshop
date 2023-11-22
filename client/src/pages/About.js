@@ -1,8 +1,5 @@
 import React from "react";
 import "./about.css";
-import glad from "../assets/images/elite.png";
-import rbgs from "../assets/images/rbgs.png";
-import Z from "../assets/images/zpets.png";
 const About = () => {
 
     return (
@@ -39,7 +36,9 @@ const About = () => {
             </div >
             <div id="ciz-close">
             <h2>Multi-Gladiator Roster</h2>
-            </div>
+            </div> 
+            </div>   
+            <div className="about-section-content">
             <div id="bub-close">
             <h2>Multi-Gladiator Roster</h2>
             </div>
@@ -48,8 +47,9 @@ const About = () => {
             </div>
             <div id="pepe-close">
             <h2>Multi-Gladiator Roster</h2>
+            </div>    
             </div>
-            </div>   
+           
         </section>
     );
 };

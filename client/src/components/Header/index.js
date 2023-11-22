@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import logo from '../../assets/images/highres.png';
 
-const Header = ({ currentPage, handlePageChange }) => {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {

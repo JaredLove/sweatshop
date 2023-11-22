@@ -1,19 +1,19 @@
-.contact {
+
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 400px;
+    height: 100%;
     color: #fff;
 }
 
 .contact-content {
-    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/ssphoto.jpg");
+    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)),  url("../assets//images/ssphoto.jpg");
     background-size: cover;
     background-position: center;
-    width: 80%;
+    width: 100%;
     height: 300px;
-    border-radius: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -29,28 +29,30 @@
 
 
 @media screen and (max-width: 768px) {
-    .contact {
+    footer {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 600px;
+        height: 100%;
         color: #fff;
     }
     
     .contact-content {
-        background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/ssphoto.jpg");
+        background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)),  url("../assets//images/ssphoto.jpg");
         background-size: cover;
         background-position: center;
-        width: 80%;
-        border-radius: 20px;
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 1.5rem;
     }
     
-    .contact p {
-        font-size: .9rem;
-        margin: 0.5rem;
-        width: 80%;
-    }
+
     
     .contact .icon {
         font-size: 5rem;
