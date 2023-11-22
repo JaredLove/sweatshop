@@ -181,7 +181,7 @@ function Roster() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`${url}/api/data`);
+      const response = await fetch(`/api/data`);
   
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -214,7 +214,7 @@ function Roster() {
 
   // Create an array of page numbers (1, 2, 3, ...)
   // const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
-  console.log(data);
+  // console.log(data);
   return (
     <section className="roster">
     <div className="data">
