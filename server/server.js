@@ -20,7 +20,9 @@ mongoose.connect(process.env.MONGODB_URI, {
   },
 });
 
-const apiUrl = process.env.BLIZZARD_API_URL; // Replace this with your actual API endpoint
+const apiUrl = process.env.BLIZZARD_API_URL; // Replace this with your actual API endpoint\
+const apiTwoUrl = process.env.BLIZZARD_API_TWO_URL; // Replace this with your actual API endpoint 
+const apiThreeUrl = process.env.BLIZZARD_API_THREE_URL; // Replace this with your actual API endpoint
 const requestQueue = [];
 let isProcessingQueue = false;
 
