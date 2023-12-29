@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Pagination from '../components/Pagination';
 import './roster.css';
 import armory from "../assets/images/link.png";
-// import axios from 'axios';
+import axios from 'axios';
 // icons
 import warrior from "../assets/icons/classicon_warrior.jpg";
 import dk from "../assets/icons/classicon_deathknight.jpg";
@@ -181,7 +181,7 @@ function Roster() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`/api/data`);
+      const response = await fetch(`${url}/api/data`);
   
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -211,7 +211,6 @@ function Roster() {
 
   // Calculate the total number of pages
   const totalPages = Math.ceil(members.length / itemsPerPage);
-
   // Create an array of page numbers (1, 2, 3, ...)
   // const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
   // console.log(data);
@@ -231,17 +230,23 @@ function Roster() {
         <p>Ciz</p>
         </li>
         <li>
-        <h2>Officers</h2>
-        <p>N/A</p>
+        <h2>OG's</h2>
+        <p>Bubbajr</p>
+        <p>Pun</p>
         </li>
         </ul>
         </div>
       {/* <button onClick={handleFetchAndSaveData} disabled={loading}>
         {loading ? 'Fetching...' : 'Fetch and Save Data'}
       </button> */}
-        <h2>Roster</h2>   
+   
+    
+
       <div className="pagination"> 
-      
+      <div>
+          <h1>Roster</h1> 
+          </div>  
+          <div>
           {/* Pagination component */}
           {/* Pass the necessary props to the Pagination component */}
           <Pagination
@@ -249,8 +254,9 @@ function Roster() {
             currentPage={currentPage}
             setCurrentPage={setCurrentPage}
           />
+          </div>
         </div>
-        
+
         <div className='table-container'>
 
 
@@ -272,7 +278,7 @@ function Roster() {
                   : member.character.rank === 1
                   ? 'Co-Founder'
                   : member.character.rank === 2
-                  ? 'Officer'
+                  ? 'OG'
                   : member.character.rank === 3
                   ? 'Veteran'
                   : member.character.rank === 4
@@ -507,7 +513,7 @@ function Roster() {
                   ? <img src={pandaFemale} alt='nightelf-Female' />
                   :'Unknown'} 
 
-                  <a href={`https://worldofwarcraft.com/en-us/character/us/${member.character.realm.slug}/${member.character.name}`} >
+                  <a href={`https://worldofwarcraft.com/en-us/character/us/${member.character.realm.slug}/${member.character.name}`} target='_blank' rel='noreferrer' >
                   <img src={armory} alt="Armory" className='arm-icon'/></a> 
                   </td> 
 

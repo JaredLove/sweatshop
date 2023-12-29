@@ -27,53 +27,31 @@
 }
 
 .left-btn {
+  background: none;
+  color: #fff;  
   font-size: 30px;
   background-color: transparent;
-  border-radius: 50%;
-
-  position: absolute;
-  margin: auto;
-  z-index: 0;
-  top: 50%;
-  left: 100px;
-  transform: translateY(-50%);
-  padding: 30px;
   border: none;
-  color: white;
   cursor: pointer;
 }
 
 .right-btn {
+  background: none;
+  color: #fff;  
   font-size: 30px;
   background-color: transparent;
-  border-radius: 50%;
-  position: absolute;
-  margin: auto;
-  z-index: 0;
-  top: 50%;
-  right: 100px;
-  transform: translateY(-50%);
-  padding: 30px;
   border: none;
-  color: white;
   cursor: pointer;
-
 }
 
-/* .btn-background2{
+.btn-background2{
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   height: 60px;
   width: 60px;
+  padding: 13px 16px;
   position: absolute;
-  margin: auto;
-  z-index: -1000;
-  top: 50%;
-  right: 150px;
-  transform: translateY(-50%);
-  padding: 30px;
-  border: none;
-  color: white;
+  inset: 45% 0 0 85%;
   cursor: pointer;
 }
 .btn-background1{
@@ -81,17 +59,11 @@
   border-radius: 50%;
   height: 60px;
   width: 60px;
+  padding: 13px 12px;
   position: absolute;
-  margin: auto;
-  z-index: 1000;
-  top: 50%;
-  left: 150px;
-  transform: translateY(-50%);
-  padding: 30px;
-  border: none;
-  color: white;
+  inset: 45% 0 0 12%;
   cursor: pointer;
-} */
+}
 
 
 @media (max-width: 768px) {

@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const axios = require('axios');
-// const cors = require('cors');
+const cors = require('cors');
 const Guild = require('./models/Guild');
 const app = express();
 const path = require('path');
@@ -10,7 +10,7 @@ const port = process.env.PORT || 3001;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// app.use(cors());
+app.use(cors());
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -76,7 +76,7 @@ app.post('/api/fetchAndSaveData', async (req, res) => {
 
       try {
         const additionalDataResponse = await enqueueRequest(
-          `https://us.api.blizzard.com/profile/wow/character/${member.character.realm.slug.toLowerCase()}/${member.character.name.toLowerCase()}?namespace=profile-us&locale=en_US&access_token=USU8We6hIolyqWhX65nFalDvpvrKsbEcR8`,
+          `https://us.api.blizzard.com/profile/wow/character/${member.character.realm.slug.toLowerCase()}/${member.character.name.toLowerCase()}?namespace=profile-us&locale=en_US&access_token=USlbnrRWUMQAiFPJBA2jF5EeAuIsZPyZAu`,
           1000 // Adjust delay as needed
         );
 
@@ -89,7 +89,7 @@ app.post('/api/fetchAndSaveData', async (req, res) => {
 
         // Make a third API call
         const thirdApiResponse = await enqueueRequest(
-          `https://us.api.blizzard.com/profile/wow/character/${member.character.realm.slug.toLowerCase()}/${member.character.name.toLowerCase()}/character-media?namespace=profile-us&locale=en_US&access_token=USU8We6hIolyqWhX65nFalDvpvrKsbEcR8`,
+          `https://us.api.blizzard.com/profile/wow/character/${member.character.realm.slug.toLowerCase()}/${member.character.name.toLowerCase()}/character-media?namespace=profile-us&locale=en_US&access_token=USlbnrRWUMQAiFPJBA2jF5EeAuIsZPyZAu`,
           1000 // Adjust delay as needed
         );
 

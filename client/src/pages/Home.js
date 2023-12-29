@@ -10,8 +10,14 @@ const Home = () => {
 
   return (
     <div className="home-container">
-        <ImageSlider images={images} />
-    </div>
+        <div className="slider">
+              <ImageSlider images={images} /> 
+          </div>      
+      
+
+           
+      </div>
+    
   );
 };
 

@@ -1,10 +1,11 @@
 import React from "react";
 import "./about.css";
+import elite from "../assets/images/elite.png";
 const About = () => {
 
     return (
         <section className="about-section">
-            <h1>Keepin' It Sweaty Since 2020.</h1>
+            <h1>About Us</h1>
             <div className="ss-p">
             <p>Do you ever wake up in a sweat? Do you ever type 
             imflammatory language in solo shuffle and decide to 
@@ -29,24 +30,29 @@ const About = () => {
             <div className="about-section-content">
             <div id="z-close">
                 <h2>Multi-Gladiator Roster</h2>
-                <p></p>
+                <img src={elite} alt="elite" />
             </div>
             <div id="me-close">
-            <h2>Multi-Gladiator Roster</h2>
+            <h2>Rbg Nights</h2>
+            <img src={elite} alt="elite" />
             </div >
             <div id="ciz-close">
-            <h2>Multi-Gladiator Roster</h2>
+            <h2>Arenas</h2>
+            <img src={elite} alt="elite" />
             </div> 
             </div>   
             <div className="about-section-content">
             <div id="bub-close">
-            <h2>Multi-Gladiator Roster</h2>
+            <h2>Active Discord</h2>
+            <img src={elite} alt="elite" />
             </div>
             <div id="lay-close">
-            <h2>Multi-Gladiator Roster</h2>
+            <h2>Healthy Banter</h2>
+            <img src={elite} alt="elite" />
             </div>
             <div id="pepe-close">
-            <h2>Multi-Gladiator Roster</h2>
+            <h2>Mythic+</h2>
+            <img src={elite} alt="elite" />
             </div>    
             </div>
            

@@ -13,9 +13,10 @@ const Contact = () => {
                     <p>
                         Start your new sweaty life today.
                         </p>      
-                <p>
+                <p className="discord">
                         
-                    <a href="https://discord.gg/gx4TTCFBU9"><FontAwesomeIcon icon={faDiscord} className="icon"/></a>
+                    <a href="https://discord.gg/gx4TTCFBU9" target='_blank' rel='noreferrer'><FontAwesomeIcon icon={faDiscord} id="icon" />    Join our discord.</a>
+                
                 </p>
                 </div>
             </footer>

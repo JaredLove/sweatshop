@@ -21,26 +21,32 @@ code {
     monospace;
 }
 
+
 .home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+}
+
+.slider {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 40px 0;
 }
-.home-container h1 {
-  font-size: 7rem;
-  color: white;
-  text-align: center;
-  margin-top: 2rem;
 
-}
-.homeLogo{
-  width: 70%;
-  height: 70%;
-  border-radius: 20px;
 
+
+@media screen and (max-width: 768px) {
+  .home-container {
+    height: 120vh;
+  }
 }
 
 

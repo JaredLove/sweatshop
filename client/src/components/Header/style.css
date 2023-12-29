@@ -1,28 +1,24 @@
 header {
- 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
     position: fixed;
-    height: 80px;
-    top: 0;
+    height: 10%;
     width: 100%;
     z-index: 1;
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../../assets/images/zrage.png");
 
 }
 
-nav {
-  background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../../assets/images/zrage.png");
-  width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;    
-    margin: 0 auto;
-}
+
 
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    margin-top: 10px;
+
 }
 
 nav li {
@@ -33,11 +29,26 @@ nav li {
 nav li a {
     color: #fff;
     text-decoration: none;
-    margin: 10px;
+
 }
 
-nav li a:hover {
-    color: #fff;
+nav li button {
+      cursor: pointer;
+      color: #fff;
+      text-decoration: none;
+      background-color: none;
+      transition: background-color 250ms ease-in;
+      transition: color 100ms ease-in;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+
+}
+
+nav li button:hover {
+    color: #000000;
+    text-decoration: none;
+    background-color: #ffffff;
 }
 
 
@@ -63,26 +74,14 @@ nav ul li button {
 }
 
 
-.hero-content {
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 /* style.css */
 
 /* Your existing styles... */
 
 /* Navbar styles */
-.navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-  }
-  
+
   .nav-links {
     list-style: none;
     display: flex;
@@ -95,7 +94,11 @@ nav ul li button {
   /* Media query for small screens */
   @media (max-width: 768px) {
     header {
- 
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
       position: fixed;
       height: 80px;
       top: 0;
@@ -105,37 +108,39 @@ nav ul li button {
   }
   
     .nav-links {
-      display: none;
       flex-direction: column;
       width: 100%;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      background-color: #333;
+      height: 100%;
+      position: fixed;
+      inset: 0 0 0 0;
+      background-color: #000000;
+      transform: translatex(-100%);
+      transition: transform 550ms ease-out;
+      padding: min(30vh, 10rem) 2em;
     }
   
     .nav-links.open {
-      display: flex;
+      transform: translatex(0%);
     }
   
     .nav-links li {
       margin: 0;
       padding: 10px;
       text-align: center;
-      border-bottom: 1px solid #555;
     }
   
     .menu-icon {
       cursor: pointer;
       display: flex;
       flex-direction: column;
+      z-index: 9999;
     }
   
     .bar {
-      height: 3px;
-      width: 25px;
+      height: 2px;
+      width: 20px;
       background-color: #fff;
-      margin: 5px 0;
+      margin: 3px 0;
     }
   }
   

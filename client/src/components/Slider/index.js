@@ -16,7 +16,7 @@ const ImageSlider = ({ images }) => {
 
   // Effect to automatically change the image every 30 seconds
   useEffect(() => {
-    const intervalId = setInterval(nextImage, 30000);
+    const intervalId = setInterval(nextImage, 10000);
 
     // Cleanup the interval on component unmount
     return () => clearInterval(intervalId);
@@ -24,18 +24,18 @@ const ImageSlider = ({ images }) => {
 
   return (
     <div className="image-slider">
-
+      <div className='btn-background1'> 
         <button onClick={prevImage} className='left-btn'>&lt;</button>
-           <div className='btn-background1'> </div>
+           </div>
       
       <img
         src={images[currentIndex]}
         alt={`Slide ${currentIndex + 1}`}
         className="slider-image"
       />
-      
+      <div className='btn-background2'>
         <button onClick={nextImage} className='right-btn'>&gt;</button>
-      <div className='btn-background2'></div>
+      </div>
         
 
       
