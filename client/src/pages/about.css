@@ -1,11 +1,13 @@
 .about-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 80vh;
   color: #fff;
+  padding-top: 100px;
+
 }
 .about-section h1 {
   font-size: 2rem;
@@ -33,123 +35,30 @@
   top: 90%;
 }
 
-.about-section img {
-  width: 100px;
-  height: 100px;
+.placeHolder {
+  background-image: url(../assets/images/redm.png);
+  width: 800px;
+  height: 500px;
   border-radius: 30px;
-  text-align: center;
-  position: relative;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0 auto;
+  margin-right: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0,0,0,1);
 }
 
-
-  .about-section-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-  }
-
   .ss-p {
-    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/zrage.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 80%;
-    height: 80%;
-    border-radius: 30px;
-    margin-bottom: 50px;
+    width: 100%;
   }
 
   .ss-p p {
-    font-size: 1.3rem;
-    width: 80%;
+    font-size: 2rem;
+    width: 60ch;
     margin: 10px auto;
     font-weight: 600;
     color: #fff;
     text-align: center;
     padding: 10px;
-  }
-
-  #z-close {
-    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)),  url("../assets//images/zclose.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 40%;
-    height: 700px;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,1);
-
-  }
-  #me-close {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../assets/images/messs.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 40%;
-    height:  700px;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-    margin: 10px;
-  }
-
-
-
-
-  #ciz-close {
-    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)),  url("../assets//images/cizglass.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 40%;
-    height: 700px;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,1);
-
-  }
-
-  #bub-close {
-    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)),  url("../assets//images/bubbaj.png");
-    background-size: cover;    
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 40%;
-    height: 700px;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,1);
-
-
-  }
-
-  #lay-close {
-    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)),  url("../assets//images/laytonsham.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 40%;
-    height: 700px;
-    margin: 0 10px;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,1);
-    margin: 10px;
-  }
-
-  
-  #pepe-close {
-    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)),  url("../assets//images/pepe.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 40%;
-    height: 700px;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,1);
-
   }
 
 
@@ -162,118 +71,66 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 100%;
+      height: 80vh;
       color: #fff;
+      padding-top: 100px;
+      overflow: hidden;
+    }
+    .about-section h1 {
+      font-size: 2rem;
+      width: 100%;
+      margin: 0 auto;
+      font-weight: 600;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      top: 90%;
+    
     }
     
     
+    .about-section h2 {
+      font-size: .9rem;
+      width: 100%;
+      margin: 0 auto;
+      font-weight: 600;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      top: 90%;
+    }
     
-      .about-section-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .placeHolder {
+      background-image: url(../assets/images/redm.png);
+      width: 90%;
+      height: 500px;
+      border-radius: 30px;
+      margin-right: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0,0,0,1);
+    }
+    
+      .ss-p {
         width: 100%;
       }
     
-      #z-close {
-        background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)),  url("../assets//images/zclose.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 80%;
-        height: 400px;
-        border-radius: 30px;
-        box-shadow: 0 0 10px rgba(0,0,0,1);
-        margin: 10px;
-      }
-    
-      #me-close {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../assets/images/messs.png");
-
-
-         /* Adjust this value to move the image up or down */
-         background-position-y: 20%; 
-        background-repeat: no-repeat;
-        width: 80%;
-        height: 400px;
-        border-radius: 30px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-        margin: 10px;
-      }
-    
-    
-      #ciz-close {
-        background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)),  url("../assets//images/cizglass.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 80%;
-        height: 400px;
-        border-radius: 30px;
-        box-shadow: 0 0 10px rgba(0,0,0,1);
-        margin: 10px;
-      }
-    
-      #bub-close {
-        background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)),  url("../assets//images/bubbaj.png");
-        background-size: cover;    
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 80%;
-        height: 400px;
-        border-radius: 30px;
-        box-shadow: 0 0 10px rgba(0,0,0,1);
-        margin: 10px;
-    
-      }
-    
-      #lay-close {
-        background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)),  url("../assets//images/laytonsham.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 80%;
-        height: 400px;
-        border-radius: 30px;
-        box-shadow: 0 0 10px rgba(0,0,0,1);
-        margin: 10px;
-      }
-    
-      
-      #pepe-close {
-        background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)),  url("../assets//images/pepe.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 80%;
-        height: 400px;
-        border-radius: 30px;
-        box-shadow: 0 0 10px rgba(0,0,0,1);
-        margin: 10px;
-      }
       .ss-p p {
-        font-size: .7rem;
-        width: 80%;
-        margin: 0 auto;
+        font-size: 1rem;
+        width: 50ch;
+        margin: 10px auto;
         font-weight: 600;
         color: #fff;
         text-align: center;
         padding: 10px;
       }
-
-      .about-section img {
-        width: 70px;
-        height: 70px;
-        border-radius: 30px;
-        text-align: center;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0 auto;
-      }
-      
+    
+    
+    
+    
     
   
   }

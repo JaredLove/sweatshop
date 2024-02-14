@@ -46,8 +46,7 @@
   background-size: cover;
   max-height: 100%; /* Adjust the height as needed */
   overflow: auto;
-  width: 80%; /* Make sure it takes full width */
-  border-radius: 20px;
+  width:100%; /* Make sure it takes full width */
   height: 891px;
 }
 
@@ -93,9 +92,8 @@ tr:nth-child(even) {
 .leaders {
   background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),  url("../assets//images/zrage.png");
   background-position: center;
-  width: 80%;
-  height: 300px;
-  border-radius: 20px;
+  width: 100%;
+  height: 450px;
     background-size: cover;
   display: flex;
   flex-direction: column;

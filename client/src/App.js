@@ -5,6 +5,8 @@ import Header from './components/Header';
 import Roster from './pages/Roster';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Offer from './pages/Offer';
+import Guild from './pages/Guild';
 // import Splash from './components/Splash';
 // import Slider from './components/Slider';
 function App() {
@@ -27,10 +29,18 @@ function App() {
           </section>
           <section id='about'>
             <About />
+            </section>            
+          
+          <section id='offer'>
+            <Offer />
+            </section>
+            <section id='guild'>
+            <Guild />
             </section>
             <section id='roster'>
             <Roster />
             </section>
+
             {/* <section id='memories'>
             <Slider images={images} />
             </section> */}

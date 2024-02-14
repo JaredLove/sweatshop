@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Pagination from '../components/Pagination';
 import './roster.css';
 import armory from "../assets/images/link.png";
-import axios from 'axios';
+// import axios from 'axios';
 // icons
 import warrior from "../assets/icons/classicon_warrior.jpg";
 import dk from "../assets/icons/classicon_deathknight.jpg";
@@ -157,7 +157,7 @@ function Roster() {
   // const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 15;
-  const url = 'http://localhost:3001';
+  // const url = 'http://localhost:3001';
 
   // const handleFetchAndSaveData = async () => {
   //   if (loading) {

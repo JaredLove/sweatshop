@@ -1,0 +1,66 @@
+.offer-container {
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("../assets/images/redm.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    padding-top: 50px;
+    height: 100vh;
+    flex-direction: column;
+}
+.offer-container h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.offer-container p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 90ch;
+
+}
+
+.what-we-offer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.wwo-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 50px;
+}
+.wwo-icons p {
+    font-size: 1.1rem;
+    width: 40ch;
+
+}
+
+.wwo-icons img {
+    width: 90px;
+    height: 90px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .offer-container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        overflow: hidden;
+    }
+    .what-we-offer {
+        grid-template-columns: 1fr;
+    }
+}
