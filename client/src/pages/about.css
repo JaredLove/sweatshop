@@ -9,30 +9,22 @@
   padding-top: 100px;
 
 }
-.about-section h1 {
-  font-size: 2rem;
-  width: 100%;
-  margin: 0 auto;
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  position: relative;
-  top: 90%;
-
-}
-
 
 .about-section h2 {
   font-size: 1.8rem;
-  width: 100%;
-  margin: 0 auto;
   font-weight: 600;
   color: #fff;
   text-align: center;
-  padding: 10px;
-  position: relative;
-  top: 90%;
+  padding: 0;
+  margin: 0;
+}
+.about-section h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--tertiary-color);
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .placeHolder {
@@ -73,41 +65,34 @@
       width: 100%;
       height: 80vh;
       color: #fff;
-      padding-top: 100px;
+      padding-top: 50px;
       overflow: hidden;
-    }
-    .about-section h1 {
-      font-size: 2rem;
-      width: 100%;
-      margin: 0 auto;
-      font-weight: 600;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-      position: relative;
-      top: 90%;
-    
-    }
-    
+    }  
     
     .about-section h2 {
-      font-size: .9rem;
-      width: 100%;
-      margin: 0 auto;
+      font-size: 1.8rem;
       font-weight: 600;
       color: #fff;
       text-align: center;
-      padding: 10px;
-      position: relative;
-      top: 90%;
+      padding: 0;
+      margin: 0;
     }
-    
+        
+    .about-section h6 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--tertiary-color);
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+
     .placeHolder {
       background-image: url(../assets/images/redm.png);
       width: 90%;
       height: 500px;
       border-radius: 30px;
-      margin-right: 100px;
+      margin-right: 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -120,7 +105,7 @@
     
       .ss-p p {
         font-size: 1rem;
-        width: 50ch;
+        width: 90%;
         margin: 10px auto;
         font-weight: 600;
         color: #fff;
@@ -142,43 +127,57 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 100%;
+      height: 80vh;
       color: #fff;
+      padding-top: 50px;
+      overflow: hidden;
+    }  
+    
+    .about-section h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #fff;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+        
+    .about-section h6 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--tertiary-color);
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    .placeHolder {
+      background-image: url(../assets/images/redm.png);
+      width: 90%;
+      height: 500px;
+      border-radius: 30px;
+      margin-right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0,0,0,1);
     }
     
-    
-    
-      .about-section-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      .ss-p {
         width: 100%;
       }
     
-     
-
       .ss-p p {
         font-size: 1rem;
-        width: 80%;
+        width: 90%;
         margin: 10px auto;
         font-weight: 600;
         color: #fff;
         text-align: center;
         padding: 10px;
       }
-
-      .about-section img {
-        width: 100px;
-        height: 100px;
-        border-radius: 30px;
-        text-align: center;
-        position: relative;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0 auto;
-      }
+    
+    
       
     
   }
@@ -190,31 +189,59 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 100%;
+      height: 80vh;
       color: #fff;
+      padding-top: 50px;
+      overflow: hidden;
+
+    }  
+    
+    .about-section h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #fff;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+        
+    .about-section h6 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--tertiary-color);
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    .placeHolder {
+      background-image: url(../assets/images/redm.png);
+      background-repeat: no-repeat;
+      width: 900px;
+      height: 500px;
+      border-radius: 30px;
+      margin-right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0,0,0,1);
     }
     
-    
-    
-      .about-section-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      .ss-p {
         width: 100%;
       }
     
-     
-
       .ss-p p {
         font-size: 1rem;
-        width: 80%;
+        width: 90%;
         margin: 10px auto;
         font-weight: 600;
         color: #fff;
         text-align: center;
         padding: 10px;
       }
+    
+    
     
   } 
 
@@ -225,21 +252,57 @@
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 100%;
+      height: 80vh;
       color: #fff;
+      padding-top: 50px;
+      overflow: hidden;
+    }  
+    
+    .about-section h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #fff;
+      text-align: center;
+      padding: 0;
+      margin: 0;
     }
-    
-    
-    
-    .about-section-content {
+        
+    .about-section h6 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--tertiary-color);
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    .placeHolder {
+      background-image: url(../assets/images/redm.png);
+      background-repeat: no-repeat;
+      width: 900px;
+      height: 500px;
+      border-radius: 30px;
+      margin-right: 0;
       display: flex;
-      flex-direction: row;
       justify-content: center;
       align-items: center;
-      width: 80%;
-      margin: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,1);
     }
-  
+    
+      .ss-p {
+        width: 100%;
+      }
+    
+      .ss-p p {
+        font-size: 1rem;
+        width: 90%;
+        margin: 10px auto;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+    
     
     
     

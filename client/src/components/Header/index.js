@@ -24,6 +24,8 @@ const Header = () => {
 
 
           <ul className={menuOpen ? "nav-links open" : "nav-links"}>
+
+                <li><img src={logo} alt="logo" className="logo-moblie" /></li> 
                 <li><a href="#home"><button  onClick={() => {setMenuOpen(false);}}>Home</button></a></li>
                 <li><a href="#about"><button  onClick={() => {setMenuOpen(false);}}>About Us</button></a></li>
                 <li><a href="#roster"><button  onClick={() => {setMenuOpen(false);}}>Roster</button></a></li>

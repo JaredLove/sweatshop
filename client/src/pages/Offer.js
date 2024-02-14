@@ -4,6 +4,7 @@ import elite from "../assets/images/elite.png";
 const Offer = () => {
     return (
         <div className="offer-container">
+            <h2>Why Join Us?</h2>
             <p>Come be apart of something that's 
                 bigger than all of us. We love 
                 to sweat and we expect you to 

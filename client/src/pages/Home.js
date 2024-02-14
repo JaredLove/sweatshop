@@ -4,6 +4,7 @@ import React from "react";
 // import crew2 from "../assets/images/ssphoto.jpg";
 // import crew3 from "../assets/images/WoWScrnShot_030522_215717.jpg";
 // import crew4 from "../assets/images/WoWScrnShot_122721_224517.jpg";
+import logo from "../assets/images/highres.png";
 import video from "../assets/videos/final.mp4";
 const Home = () => {
   // const images = [crew1, crew2, crew3, crew4];
@@ -19,6 +20,7 @@ const Home = () => {
             </video>
         </div>
         <div className="home-header">
+            <img src={logo} alt="logo" className="home-logo" />
             <h4>
               Keepin' It Sweaty Since 2020
             </h4>

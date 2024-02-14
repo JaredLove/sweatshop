@@ -7,8 +7,11 @@ footer {
     justify-content: center;
     height: 100%;
     color: #fff;
+    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)), url("../assets/images/graybg.jpg");
 }
-
+.footer-content {
+    display: flex;
+}
 footer h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -44,19 +47,7 @@ footer h1 {
     width: 25px;
 
 }
-.contact-content {
-    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)),  url("../assets//images/ssphoto.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    font-size: 1.5rem;
-}
+
 
 .contact .icon {
     font-size: 5rem;
