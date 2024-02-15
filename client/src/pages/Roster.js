@@ -157,7 +157,7 @@ function Roster() {
   // const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 15;
-  const url = 'http://localhost:3001';
+  // const url = 'http://localhost:3001';
 
   // const handleFetchAndSaveData = async () => {
   //   if (loading) {
@@ -181,7 +181,7 @@ function Roster() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`${url}/api/data`);
+      const response = await fetch(`api/data`);
   
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
