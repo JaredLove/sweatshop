@@ -14,17 +14,14 @@
     margin: 0 50px;
     color: #fff;
 }
-.guild-info h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}   
+  
 .guild-info p {
-    font-size: 1.2rem;
+    font-size: calc(10px + 1vw);
     margin-bottom: 20px;
-    width: 90ch;
+    width: 90%;
 }   
 .guild-image img {
-    width: 500px;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -34,6 +31,12 @@
 
 
 @media screen and (max-width: 768px) {
+    .guild-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
     .guild-section {
         flex-direction: column;
         overflow: hidden;
@@ -42,22 +45,30 @@
         margin: 0;
         margin-top: 20px;
     }
+    .guild-image {
+        width: 50%;
+        height: 100%; 
+    }
     .guild-image img {
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        height: 100%;
     }
     .guild-info h1 {
         font-size: 1rem;
         margin-bottom: 20px;
     }   
     .guild-info p {
-        font-size: .9rem;
         margin-bottom: 20px;
-        width: 50ch;
     }   
 }
 
 @media screen and (min-width: 769px) and (max-width: 1000px) { 
+    .guild-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
     .guild-section {
         flex-direction: column;
         overflow: hidden;
@@ -66,18 +77,20 @@
         margin: 0;
         margin-top: 20px;
     }
+    .guild-image {
+        width: 50%;
+        height: 100%; 
+    }
     .guild-image img {
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        height: 100%;
     }
     .guild-info h1 {
         font-size: 1rem;
         margin-bottom: 20px;
     }   
     .guild-info p {
-        font-size: .9rem;
         margin-bottom: 20px;
-        width: 50ch;
     }   
 }
 
@@ -86,21 +99,29 @@
         flex-direction: column;
         overflow: hidden;
     }
+    .guild-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
     .guild-info {
         margin: 0;
         margin-top: 20px;
     }
+    .guild-image {
+        width: 50%;
+        height: 100%; 
+    }
     .guild-image img {
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        height: 100%;
     }
     .guild-info h1 {
         font-size: 1rem;
         margin-bottom: 20px;
     }   
     .guild-info p {
-        font-size: .9rem;
         margin-bottom: 20px;
-        width: 50ch;
     }   
 }

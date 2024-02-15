@@ -41,8 +41,7 @@ nav li button {
       color: #fff;
       text-decoration: none;
       background-color: none;
-      transition: background-color 250ms ease-in;
-      transition: color 100ms ease-in;
+      transition: color .5s ease-in;
       border: none;
       border-radius: 10px;
       padding: 10px;
@@ -53,6 +52,7 @@ nav li button:hover {
     color: #000000;
     text-decoration: none;
     background-color: #ffffff;
+    transition: background-color .5s ease-in;
 }
 
 

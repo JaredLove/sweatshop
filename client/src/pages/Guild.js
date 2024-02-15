@@ -12,7 +12,8 @@ const Guild = () => {
                 </div>
             </div>
             <div className="guild-info">
-                <h1>More Than Just A Guild</h1>
+                <h6>It Starts Here</h6>
+                <h2>More Than Just A Guild</h2>
                 <p>
                     We are a guild of like-minded individuals 
                     who have come together to form a community of gamers. 

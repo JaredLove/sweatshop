@@ -7,19 +7,20 @@ import {faDiscord} from '@fortawesome/fontawesome-free-brands';
 const Contact = () => {
     
         return (
-            <footer className="contact">     
+            <footer className="contact">
+            <h6>It Starts Here</h6>     
             <h1 id="work">Join Us</h1>
             <div className="footer-content">
                 <div>
                     <p>
                         Start your new sweaty life today.
                     </p>      
-                    <p className="discord">
-                        <a href="https://discord.gg/gx4TTCFBU9" target='_blank' rel='noreferrer'><FontAwesomeIcon icon={faDiscord} id="icon" />    Join our discord.</a>
+                    <p>
+                        <a href="https://discord.gg/gx4TTCFBU9" target='_blank' rel='noreferrer' className="discord"><FontAwesomeIcon icon={faDiscord} id="icon" /></a>
                     </p>
             </div>
                 
-                <div>
+                <div className="contact">
                     <h2>Other Links</h2>
                     <div>
                         <h2>Twitch</h2>

@@ -15,18 +15,18 @@
     width: 100%;
     padding-top: 50px;
     height: 100vh;
+    max-height: 100%;
     flex-direction: column;
+    overflow: hidden;
 }
-.offer-container h2 {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
+
+
 .offer-container p {
-    font-size: 1.3rem;
+    font-size: calc(10px + 1vw);
     margin-bottom: 20px;
     text-align: center;
-    width: 90ch;
+    width: 70%;
+    margin: 0 auto;
 
 }
 
@@ -39,28 +39,58 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 50px;
+    margin-bottom: 20px;
+    width: 60%;
+    margin: 0 auto;
+
 }
 .wwo-icons p {
     font-size: 1.1rem;
-    width: 40ch;
+    width: 70%;
 
 }
 
 .wwo-icons img {
     width: 90px;
     height: 90px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 1px solid var(--tertiary-color);
 }
 
-
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .offer-container {
         padding-top: 50px;
         padding-bottom: 50px;
         overflow: hidden;
+        height: 100%;
+        width: 100%;
     }
     .what-we-offer {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
+    .what-we-offer p {
+        font-size: 1.1rem;
+        width: 90%;
+    }
+    .offer-container p {
+        font-size: calc(10px + 1vw);
+        margin-bottom: 20px;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .wwo-icons img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 20px;
+        border: 1px solid var(--tertiary-color);
+    }
+
+    
 }
