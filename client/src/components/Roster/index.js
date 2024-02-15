@@ -1,149 +1,149 @@
 
 import React, { useState, useEffect } from 'react';
-import Pagination from '../components/Pagination';
+import Pagination from '../Pagination';
 import './roster.css';
-import armory from "../assets/images/link.png";
+import armory from "../../assets/images/link.png";
 // import axios from 'axios';
 // icons
-import warrior from "../assets/icons/classicon_warrior.jpg";
-import dk from "../assets/icons/classicon_deathknight.jpg";
-import druid from "../assets/icons/classicon_druid.jpg";
-import hunter from "../assets/icons/classicon_hunter.jpg";
-import mage from "../assets/icons/classicon_mage.jpg";
-import monk from "../assets/icons/classicon_monk.jpg";
-import paladin from "../assets/icons/classicon_paladin.jpg";
-import priest from "../assets/icons/classicon_priest.jpg";
-import rogue from "../assets/icons/classicon_rogue.jpg";
-import shaman from "../assets/icons/classicon_shaman.jpg";
-import warlock from "../assets/icons/classicon_warlock.jpg";
-import demonhunter from "../assets/icons/classicon_demonhunter.jpg";
-import evoker from "../assets/icons/classicon_evoker.jpg";
+import warrior from "../../assets/icons/classicon_warrior.jpg";
+import dk from "../../assets/icons/classicon_deathknight.jpg";
+import druid from "../../assets/icons/classicon_druid.jpg";
+import hunter from "../../assets/icons/classicon_hunter.jpg";
+import mage from "../../assets/icons/classicon_mage.jpg";
+import monk from "../../assets/icons/classicon_monk.jpg";
+import paladin from "../../assets/icons/classicon_paladin.jpg";
+import priest from "../../assets/icons/classicon_priest.jpg";
+import rogue from "../../assets/icons/classicon_rogue.jpg";
+import shaman from "../../assets/icons/classicon_shaman.jpg";
+import warlock from "../../assets/icons/classicon_warlock.jpg";
+import demonhunter from "../../assets/icons/classicon_demonhunter.jpg";
+import evoker from "../../assets/icons/classicon_evoker.jpg";
 
 //races
-import alliance from "../assets/races/Alliance_15.jpg";
-import horde from "../assets/races/Horde_15.jpg";
+import alliance from "../../assets/races/Alliance_15.jpg";
+import horde from "../../assets/races/Horde_15.jpg";
 
-import humanMale from "../assets/races/human-male.jpg";
-import humanFemale from "../assets/races/human-female.jpg";
+import humanMale from "../../assets/races/human-male.jpg";
+import humanFemale from "../../assets/races/human-female.jpg";
 
-import bloodMale from "../assets/races/bloodelf-male.jpg";
-import bloodFemale from "../assets/races/bloodelf-female.jpg";
+import bloodMale from "../../assets/races/bloodelf-male.jpg";
+import bloodFemale from "../../assets/races/bloodelf-female.jpg";
 
-import darkIronFemale from "../assets/races/DarkIron_Female.jpg";
-import darkIronMale from "../assets/races/DarkIron_Male.jpg";
+import darkIronFemale from "../../assets/races/DarkIron_Female.jpg";
+import darkIronMale from "../../assets/races/DarkIron_Male.jpg";
 
-import dreaneiFemale from "../assets/races/draenei-female.jpg";
-import dreaneiMale from "../assets/races/draenei-male.jpg";
+import dreaneiFemale from "../../assets/races/draenei-female.jpg";
+import dreaneiMale from "../../assets/races/draenei-male.jpg";
 
-import dwarfFemale from "../assets/races/dwarf-female.jpg";
-import dwarfMale from "../assets/races/dwarf-male.jpg";
+import dwarfFemale from "../../assets/races/dwarf-female.jpg";
+import dwarfMale from "../../assets/races/dwarf-male.jpg";
 
-import gnomeFemale from "../assets/races/gnome-female.jpg";
-import gnomeMale from "..//assets/races/gnome-male.jpg";
+import gnomeFemale from "../../assets/races/gnome-female.jpg";
+import gnomeMale from "../../assets/races/gnome-male.jpg";
 
-import gobFemale from "../assets/races/goblin-female.jpg";
-import gobMale from "../assets/races/goblin-male.jpg";
+import gobFemale from "../../assets/races/goblin-female.jpg";
+import gobMale from "../../assets/races/goblin-male.jpg";
 
-import hmFemale from "../assets/races/Highmountain_Female.jpg";
-import hmMale from "../assets/races/Highmountain_Male.jpg";
+import hmFemale from "../../assets/races/Highmountain_Female.jpg";
+import hmMale from "../../assets/races/Highmountain_Male.jpg";
 
-import junkerFemale from "../assets/races/Junker_Female.jpg";
-import junkerMale from "../assets/races/Junker_Male.jpg";
+import junkerFemale from "../../assets/races/Junker_Female.jpg";
+import junkerMale from "../../assets/races/Junker_Male.jpg";
 
-import ktFemale from "../assets/races/KulTiran_Female.jpg";
-import ktMale from "../assets/races/KulTiran_Male.jpg";
+import ktFemale from "../../assets/races/KulTiran_Female.jpg";
+import ktMale from "../../assets/races/KulTiran_Male.jpg";
 
-import lfFemale from "../assets/races/Lightforged_Female.jpg";
-import lfMale from "../assets/races/Lightforged_Male.jpg";
+import lfFemale from "../../assets/races/Lightforged_Female.jpg";
+import lfMale from "../../assets/races/Lightforged_Male.jpg";
 
-import nbFemale from "../assets/races/Nightborne_Female.jpg";
-import nbMale from "../assets/races/Nightborne_Male.jpg";
+import nbFemale from "../../assets/races/Nightborne_Female.jpg";
+import nbMale from "../../assets/races/Nightborne_Male.jpg";
 
-import nfFemale from "../assets/races/nightelf-female.jpg";
-import nfMale from "../assets/races/nightelf-male.jpg";
+import nfFemale from "../../assets/races/nightelf-female.jpg";
+import nfMale from "../../assets/races/nightelf-male.jpg";
 
-import orcFemale from "../assets/races/orc-female.jpg";
-import orcMale from "../assets/races/orc-male.jpg";
+import orcFemale from "../../assets/races/orc-female.jpg";
+import orcMale from "../../assets/races/orc-male.jpg";
 
-import orcBrownFemale from "../assets/races/OrcBrown_Female.jpg";
-import orcBrownmale from "../assets/races/OrcBrown_Male.jpg";
+import orcBrownFemale from "../../assets/races/OrcBrown_Female.jpg";
+import orcBrownmale from "../../assets/races/OrcBrown_Male.jpg";
 
-import taurenFemale from "../assets/races/tauren-female.jpg";
-import taurenMale from "../assets/races/tauren-male.jpg";
+import taurenFemale from "../../assets/races/tauren-female.jpg";
+import taurenMale from "../../assets/races/tauren-male.jpg";
 
-import trollFemale from "../assets/races/troll-female.jpg";
-import trollMale from "../assets/races/troll-male.jpg";
+import trollFemale from "../../assets/races/troll-female.jpg";
+import trollMale from "../../assets/races/troll-male.jpg";
 
-import undeadFemale from "../assets/races/undead-female.jpg";
-import undeadMale from "../assets/races/undead-male.jpg";
+import undeadFemale from "../../assets/races/undead-female.jpg";
+import undeadMale from "../../assets/races/undead-male.jpg";
 
-import voidFemale from "../assets/races/VoidElf_Female.jpg";
-import voidMale from "../assets/races/VoidElf_Male.jpg";
+import voidFemale from "../../assets/races/VoidElf_Female.jpg";
+import voidMale from "../../assets/races/VoidElf_Male.jpg";
 
-import vulFemale from "../assets/races/Vulpera_Female.jpg";
-import vulMale from "../assets/races/Vulpera_Male.jpg";
+import vulFemale from "../../assets/races/Vulpera_Female.jpg";
+import vulMale from "../../assets/races/Vulpera_Male.jpg";
 
-import worgenFemale from "../assets/races/worgen-female.jpg";
-import worgenMale from "../assets/races/worgen-male.jpg";
+import worgenFemale from "../../assets/races/worgen-female.jpg";
+import worgenMale from "../../assets/races/worgen-male.jpg";
 
-import zandaFemale from "../assets/races/Zandalari_Female.jpg";
-import zandaMale from "../assets/races/Zandalari_Male.jpg";
+import zandaFemale from "../../assets/races/Zandalari_Female.jpg";
+import zandaMale from "../../assets/races/Zandalari_Male.jpg";
 
-import pandaFemale from "../assets/races/Pandaren_Female.jpg";
-import pandaMale from "../assets/races/Pandaren_Male.jpg"
+import pandaFemale from "../../assets/races/Pandaren_Female.jpg";
+import pandaMale from "../../assets/races/Pandaren_Male.jpg"
 
-import dragFemale from "../assets/races/Dracthyr_Female.jpg";
-import dragMale from "../assets/races/Dracthyr_Male.jpg"
+import dragFemale from "../../assets/races/Dracthyr_Female.jpg";
+import dragMale from "../../assets/races/Dracthyr_Male.jpg"
 
 // spec icons
 
-import arms from "../assets/spec/warrior/arms.png";
-import fury from "../assets/spec/warrior/fury.png";
-import prot from "../assets/spec/warrior/protection.png";
+import arms from "../../assets/spec/warrior/arms.png";
+import fury from "../../assets/spec/warrior/fury.png";
+import prot from "../../assets/spec/warrior/protection.png";
 
-import havoc from "../assets/spec/demonhunter/havoc.png";
-import vengeance from "../assets/spec/demonhunter/vengeance.png";
+import havoc from "../../assets/spec/demonhunter/havoc.png";
+import vengeance from "../../assets/spec/demonhunter/vengeance.png";
 
-import balance from "../assets/spec/druid/balance.png";
-import feral from "../assets/spec/druid/feral.png";
-import guardian from "../assets/spec/druid/guardian.png";
-import resto from "../assets/spec/druid/restoration.png";
+import balance from "../../assets/spec/druid/balance.png";
+import feral from "../../assets/spec/druid/feral.png";
+import guardian from "../../assets/spec/druid/guardian.png";
+import resto from "../../assets/spec/druid/restoration.png";
 
-import bm from "../assets/spec/hunter/beastmastery.png";
-import mark from "../assets/spec/hunter/marksman.png";
-import surv from "../assets/spec/hunter/survival.png";
+import bm from "../../assets/spec/hunter/beastmastery.png";
+import mark from "../../assets/spec/hunter/marksman.png";
+import surv from "../../assets/spec/hunter/survival.png";
 
-import arcane from "../assets/spec/mage/arcane.png";
-import fire from "../assets/spec/mage/fire.png";
-import frost from "../assets/spec/mage/frost.png";
+import arcane from "../../assets/spec/mage/arcane.png";
+import fire from "../../assets/spec/mage/fire.png";
+import frost from "../../assets/spec/mage/frost.png";
 
-import brew from "../assets/spec/monk/brewmaster.png";
-import mist from "../assets/spec/monk/mistweaver.png";
-import wind from "../assets/spec/monk/windwalker.png";
+import brew from "../../assets/spec/monk/brewmaster.png";
+import mist from "../../assets/spec/monk/mistweaver.png";
+import wind from "../../assets/spec/monk/windwalker.png";
 
-import holy from "../assets/spec/paladin/holy.png";
-import protPal from "../assets/spec/paladin/protection.png";
-import ret from "../assets/spec/paladin/retribution.png";
+import holy from "../../assets/spec/paladin/holy.png";
+import protPal from "../../assets/spec/paladin/protection.png";
+import ret from "../../assets/spec/paladin/retribution.png";
 
-import disc from "../assets/spec/priest/discipline.png";
-import holyPriest from "../assets/spec/priest/holy.png";
-import shadow from "../assets/spec/priest/shadow.png";
+import disc from "../../assets/spec/priest/discipline.png";
+import holyPriest from "../../assets/spec/priest/holy.png";
+import shadow from "../../assets/spec/priest/shadow.png";
 
-import aff from "../assets/spec/warlock/affliction.png";
-import demo from "../assets/spec/warlock/demonology.png";
-import destro from "../assets/spec/warlock/destruction.png";
+import aff from "../../assets/spec/warlock/affliction.png";
+import demo from "../../assets/spec/warlock/demonology.png";
+import destro from "../../assets/spec/warlock/destruction.png";
 
-import blood from "../assets/spec/deathknight/blood.png";
-import frostDk from "../assets/spec/deathknight/frost.png";
-import unholy from "../assets/spec/deathknight/unholy.png";
+import blood from "../../assets/spec/deathknight/blood.png";
+import frostDk from "../../assets/spec/deathknight/frost.png";
+import unholy from "../../assets/spec/deathknight/unholy.png";
 
-import ele from "../assets/spec/shaman/elemental.png";
-import enh from "../assets/spec/shaman/enhancement.png";
-import restoSham from "../assets/spec/shaman/restoration.png";
+import ele from "../../assets/spec/shaman/elemental.png";
+import enh from "../../assets/spec/shaman/enhancement.png";
+import restoSham from "../../assets/spec/shaman/restoration.png";
 
-import assrogue from "../assets/spec/rogue/assassination.png";
-import outlaw from "../assets/spec/rogue/outlaw.png";
-import sub from "../assets/spec/rogue/subtlety.png";
+import assrogue from "../../assets/spec/rogue/assassination.png";
+import outlaw from "../../assets/spec/rogue/outlaw.png";
+import sub from "../../assets/spec/rogue/subtlety.png";
 
 
 
@@ -217,8 +217,9 @@ function Roster() {
   return (
     <section className="roster">
     <div className="data">
-      <h1>Sweatshop Leaders</h1>
-      <div className='leaders'>
+
+      <div className='leaders'>      
+        <h2>Sweatshop Leaders</h2>
         <ul>
         <li>
         <h2>Founder</h2>

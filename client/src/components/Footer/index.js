@@ -8,22 +8,22 @@ const Contact = () => {
     
         return (
             <footer className="contact">
-            <h6>It Starts Here</h6>     
-            <h1 id="work">Join Us</h1>
+            <h6>Stay Connected</h6>     
+            <h2 id="work">Join Us</h2>
             <div className="footer-content">
                 <div>
-                    <p>
+                    <h2>
                         Start your new sweaty life today.
-                    </p>      
-                    <p>
-                        <a href="https://discord.gg/gx4TTCFBU9" target='_blank' rel='noreferrer' className="discord"><FontAwesomeIcon icon={faDiscord} id="icon" /></a>
-                    </p>
+                    </h2>      
+
+            <button className="discord"><a href="https://discord.gg/gx4TTCFBU9" target='_blank' rel='noreferrer'><FontAwesomeIcon icon={faDiscord} id="icon" /></a></button>
+
             </div>
                 
                 <div className="contact">
                     <h2>Other Links</h2>
                     <div>
-                        <h2>Twitch</h2>
+                        <h6>Twitch</h6>
                         <ul>
                             <li>
                                 <a href="https://www.twitch.tv/pepefreshtv" target='_blank' rel='noreferrer'>PepeFreshTV</a>

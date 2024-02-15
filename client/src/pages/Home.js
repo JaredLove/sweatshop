@@ -20,10 +20,25 @@ const Home = () => {
             </video>
         </div>
         <div className="home-header">
+          <div>
             <img src={logo} alt="logo" className="home-logo" />
-            <h4>
+          </div>
+          <div>
+            <h6>
+              A New Beginning
+            </h6>
+            
+          </div>          
+          <div>
+             <h3>
               Keepin' It Sweaty Since 2020
-            </h4>
+            </h3>
+          </div>
+          <div>
+            <button><a href="#about">Learn More</a></button>
+            <button id="outer"><a href="#contact">Join Us</a></button>
+          </div>
+
         </div>
 
            

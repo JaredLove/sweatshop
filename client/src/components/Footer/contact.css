@@ -7,40 +7,36 @@ footer {
     justify-content: center;
     height: 100%;
     color: #fff;
-    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)), url("../assets/images/graybg.jpg");
+    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)), url("../../assets/images/graybg.jpg");
 }
 .footer-content {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-footer h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+footer h2 {
+    width: 20ch;
 }
 
 .discord {
     background-color: #21609b;
     height: 15%;
     width:50%;
+    margin: 0 auto;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 1rem;
     text-decoration: none;
     color: #fff;
     font-size: 1.5rem;
     font-weight: bold;
     transition: all 0.2s ease-in-out;
-
+    border: none;
+    cursor: pointer;
+    text-align: center;
 }
 
-.discord  {
-
-    color: #fff;
-    text-decoration: none;
-    width: 100px;
-    padding: 5px;
-}
 #icon {
     display: inline-block;
     color: #fff;
@@ -93,7 +89,7 @@ footer h1 {
     }
     
     .contact-content {
-        background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)),  url("../assets//images/ssphoto.jpg");
+        background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.6)),  url("../../assets/images/ssphoto.jpg");
         background-size: cover;
         background-position: center;
         width: 100%;
@@ -111,6 +107,13 @@ footer h1 {
     .contact .icon {
         font-size: 5rem;
         margin: 0.5rem;
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
     }
     
 }

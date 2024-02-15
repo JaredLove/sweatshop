@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import './App.css';
 import Home from './pages/Home';
 import Header from './components/Header';
-import Roster from './pages/Roster';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Offer from './pages/Offer';
-import Guild from './pages/Guild';
+import Roster from './components/Roster';
+import About from './components/About';
+import Contact from './components/Footer';
+import Offer from './components/Offer';
+import Guild from './components/Guild';
 // import Splash from './components/Splash';
 // import Slider from './components/Slider';
 function App() {

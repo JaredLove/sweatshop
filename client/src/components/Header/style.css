@@ -9,9 +9,10 @@ header {
   transform: translate(-50%, -10%);
   height: 7%;
   width: 95%;
+  max-height: 60px;
   margin: 1% 0;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.5); /* Adjust the transparency here */
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency here */
   backdrop-filter: blur(10px); /* Adjust the blur radius here */
   border-radius: 10px; /* Increase the border radius for rounded corners */
 }

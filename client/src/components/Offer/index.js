@@ -1,6 +1,6 @@
 import React from "react";
 import "./offer.css";
-import elite from "../assets/images/elite.png";
+import elite from "../../assets/images/elite.png";
 const Offer = () => {
     return (
         <div className="offer-container">
